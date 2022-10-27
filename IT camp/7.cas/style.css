@@ -1,0 +1,40 @@
+.main {
+  width: 400px;
+  height: 300px;
+  background-color: blue;
+  border: 3px solid black;
+  border-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 50px;
+  margin: 50px auto;
+  /* margin left right bottom top */
+  /* ako imamo 4 vrednosti za svojstvo margin ili pading.Svatanje cssa je sledece:; */
+  /* 1.Vrednost se odnosi na margin top */
+  /* 2.Vrednost se odnosi na margin right */
+  /* 3.Vrednost se odnosi na margin buttom */
+  /* 4. Vrednost se odnosi na margin left */
+  /* ako imamo 2 vrednosti,prva se odnosi na top i bottom a druga na left i right */
+  /* ako imamo 3 vrednosti,prva za top druga za right left,treca bot */
+  /* border: double; dupla linija */
+  /* border: dashed isprekidana; */
+  box-shadow: 3px 3px 9px rgba(0, 0, 0);
+  /* kad je -3 px onda se senka premesta na gore */
+}
+button {
+  height: 80px;
+  width: 70px;
+  margin-left: 400px;
+}
+p {
+  text-align: justify;
+  text-indent: 20px;
+}
+p:hover {
+  background-color: brown;
+  color: aqua;
+}
+/* Odraditi karticu kao sa slike.Glva kartica sirina 400 px,visina 600px.Fotografija da zauzima trecinu glavnom kontejnera
+Naslov velicine h1,podnaslov h3 */
+button:hover {
+  background-image: url(/liv\ 5-0.jpg);
+}

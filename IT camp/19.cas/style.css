@@ -1,0 +1,44 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Parisienne", cursive;
+}
+
+.parent {
+  width: 400px;
+  height: 400px;
+  background-color: rgb(90, 101, 39);
+  margin: 0px auto;
+}
+.child {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(37, 166, 140);
+  /* transition: transform 3s; */
+}
+.parent:hover .child {
+  /* transform: translateX(250px) translateY(250px); */
+  /* transition: 2s ease; */
+  animation: top-to-bottom 4s ease-in-out forwards 3 alternate;
+  /* animation-name: top-to-bottom; */
+  /* animation fill mode forwards */
+  /* alternate direction alternate*/
+  /*  */
+}
+/* tran delay,timing,preoperty transfrom */
+@keyframes top-to-bottom {
+  0% {
+    transform: translateY(0px);
+  }
+  33% {
+    transform: translateX(250px);
+  }
+  66% {
+    transform: translateY(250px);
+  }
+  100% {
+    transform: translateX(250px) translateY(250px);
+  }
+}

@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.main {
+  margin: auto;
+  width: 65%;
+  height: 500px;
+  background-color: #deb887;
+  display: flex;
+}
+.box1 {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+  order: 2;
+}
+.box2 {
+  width: 150px;
+  height: 150px;
+  background-color: blueviolet;
+  order: 1;
+  /* order mora da se odredi svakom elementu */
+}
+.box3 {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  order: 4;
+}
+.box4 {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  order: 3;
+}

@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Kalam", cursive;
+}
+.main {
+  width: 600px;
+  height: 300px;
+  background-color: aqua;
+  margin: auto;
+}
+.child {
+  background-color: blue;
+}
+/* absolutne velicine: */
+/* cm-centimetri */
+/* mm-milimetri */
+/* in-inci jedan in=96px */
+/* px-pikseli */
+/* pt-points */
+/* pc-picas 1 picas =12pts */
+
+/* Relative lengths */
+/* font-size:em znaci da uzima size od parent elementa,ako je broj ispred ovog em npr 2em onda se mnozi sa dva od parent size */
+/* rem re;atovam i pdmpsi ma font size od body-ne nasledjuje velicinu od roditelja */
+/* vw relativan u odnosu na sirinu ekrana */
+/* vh relativan u odnosu na visinu ekrana */
+/* vmin relativna 1% u odnosu na manji deo (sirina ili visin) */
+/* vmax relativna 1% u odnosu na veci deo (sirina ili visina) */
+/* %procenat je relativan u odnosu parent elementa */

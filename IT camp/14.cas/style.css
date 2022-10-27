@@ -1,0 +1,86 @@
+body {
+  font-family: "Antonio", sans-serif;
+  background-color: #f0f2f5;
+}
+.oks {
+  padding-top: 190px;
+}
+.harvard {
+  margin-left: 150px;
+  margin-right: 150px;
+  float: left;
+}
+.harvard h1 {
+  color: rgb(60, 60, 201);
+  font-size: 45px;
+}
+.harvard h2 {
+  font-size: 35px;
+}
+.input {
+  display: inline-block;
+  width: 400px;
+  border-radius: 5px;
+
+  text-align: center;
+  background-color: white;
+  padding-top: 20px;
+  margin-bottom: 15px;
+}
+.input input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-top: 16px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 16px;
+  width: 270px;
+  margin-bottom: 16px;
+  border-color: #dddfe2;
+}
+.input button {
+  width: 75%;
+  height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  background-color: #1877f2;
+  color: white;
+  border-color: transparent;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #1877f2;
+}
+input {
+  border: 1px solid;
+  border-radius: 5px;
+}
+.input button:nth-of-type(2) {
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 45px;
+  background-color: #42b72a;
+  margin-top: 25px;
+  width: 55%;
+  border-radius: 3px;
+}
+button:nth-of-type(1) {
+  border-radius: 5px;
+}
+.linija {
+  border: 0.1px solid;
+  margin-top: 25px;
+  border-color: #dddfe2;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+p {
+  margin-left: 800px;
+}

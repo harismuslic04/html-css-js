@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+}
+.main {
+  width: 200px;
+  height: 200px;
+}
+.main:nth-of-type(1) {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.main:nth-of-type(2) {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  /* display: none; ovako sakrivamo sadrzaj */
+  /* visibility: hidden; da ga sakrijemo ali ostaje bela praznina */
+}
+.main:nth-of-type(3) {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+/* p {
+  line-height: 30px;
+} za razmak izmedju redova */
+.second {
+  margin: auto;
+  width: 700px;
+  height: 450px;
+  background-image: url(/pozadina.jpg);
+  /* background-repeat: no-repeat; ako je slika mala,da se ne ponavlja kako bi zauzela celo mesto */
+  /* background-size: 100%; jedna jedinica se odnosi na sirinu,a ako su dve druga je na visinu[p
+   */
+}

@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+  display: flex;
+  background-color: white;
+  height: 90px;
+  box-shadow: 6px 6px 7px whitesmoke;
+}
+.header h1 {
+  color: blue;
+  left: 100px;
+  top: 30px;
+  position: relative;
+}
+.header ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  position: relative;
+  left: 400px;
+  top: 40px;
+  text-decoration: none;
+}
+.header ul a {
+  text-decoration: none;
+}
+.header button {
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  position: relative;
+  top: 30px;
+  left: 500px;
+  background-color: blue;
+  color: white;
+  border-color: blue;
+}
+.main img {
+  width: 35%;
+  height: 500px;
+  position: absolute;
+  left: 100px;
+  top: 200px;
+}
+.main h3 {
+  width: 500px;
+  position: absolute;
+  top: 200px;
+  right: 300px;
+  font-size: 20px;
+  color: rgb(35, 35, 167);
+}
+.drugip p {
+  color: black;
+  position: absolute;
+  top: 260px;
+  width: 750px;
+  line-height: 20px;
+  font-size: 17px;
+  right: 50px;
+}
+.trecip i {
+  font-size: 25px;
+  position: absolute;
+  top: 340px;
+  right: 780px;
+}
+.trecip p {
+  position: absolute;
+  left: 770px;
+  top: 340px;
+}
+.cetvrtip i {
+  font-size: 25px;
+  position: absolute;
+  top: 380px;
+  right: 780px;
+}
+.cetvrtip p {
+  position: absolute;
+  left: 770px;
+  top: 380px;
+}
+.petip i {
+  font-size: 25px;
+  position: absolute;
+  top: 420px;
+  right: 780px;
+}
+.petip p {
+  position: absolute;
+  left: 770px;
+  top: 420px;
+}
+.sestip i {
+  font-size: 25px;
+  position: absolute;
+  top: 460px;
+  right: 780px;
+}
+.sestip p {
+  position: absolute;
+  left: 770px;
+  top: 460px;
+}
+.sedmip p {
+  position: absolute;
+  left: 714px;
+  top: 500px;
+}

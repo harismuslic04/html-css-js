@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.main {
+  margin: auto;
+  width: 75%;
+  height: 550px;
+  background-color: brown;
+  display: flex;
+}
+.box1 {
+  width: 150px;
+  background-color: aqua;
+  height: 150px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.box2 {
+  width: 150px;
+  background-color: red;
+  height: 150px;
+  /* flex-grow svojstvo zauzima celokupnu sirinu,definise se uz pomoc brojeva */
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.box3 {
+  width: 150px;
+  background-color: yellow;
+  height: 150px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}

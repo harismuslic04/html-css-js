@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+.container {
+  margin: auto;
+  width: 80%;
+  background-color: rgb(103, 210, 210);
+  height: 100vh;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* grid template columns kolko dodam vrednosti toliko elemenata je u jednoj koloni */
+  grid-template-columns: repeat(2, 250px);
+  /* grid-template-rows: 400px; */
+  /* grid template rows predstavlja vrednost visine za redove redom respektivno*/
+  /* grid-auto-rows: 400px; */
+  /* grid auto rows je visina za sve redove  */
+
+  grid-auto-rows: minmax 5px auto;
+  gap: 15px;
+  /* grid-area: header header header; */
+  /* grid-template-areas: "header header "; */
+}
+.box1 {
+  /* height: 150px; */
+  background-color: rgb(209, 209, 22);
+  /* grid-area: header; */
+  /* grid-area: header; */
+}
+.box2 {
+  background-color: blue;
+  /* height: 150px; */
+}
+.box3 {
+  /* height: 150px; */
+  background-color: rgb(35, 211, 55);
+}
+.box4 {
+  /* height: 150px; */
+  background-color: rgb(167, 96, 10);
+}
+
+.box5 {
+  /* height: 150px; */
+  background-color: rgb(203, 13, 26);
+}
+/* template columns fr fr fr slicno ko flex grow redjaju se elementi svi iste sirine nema razmaka */

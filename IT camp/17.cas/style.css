@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.main {
+  width: 75%;
+  height: 500px;
+  background-color: #deb887;
+  margin: auto;
+  display: flex;
+  /* horizontalno poravnanje */
+  /* justify-content: start; defaultna vrednost */
+  /* justify-content: flex-start defaultna vrednost; */
+  /* justify-content: center; */
+  /* justify-content: end; */
+  justify-content: space-between;
+  /* justify-content: space-around; ne krece se od ivica horizontale */
+  /* justify-content: space-evenly isti razmak izmedju svega,i ivica isto; */
+
+  /* Vertikalno poravnanje */
+  /* align-items: flex-start; default */
+  align-items: center;
+  /* align-items: flex-end ; poslednja horizontala */
+}
+.box1 {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+  align-self: flex-start;
+}
+.box2 {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.box3 {
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  align-self: flex-end;
+}
+.links {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+}
+.links a {
+  text-decoration: none;
+  font-size: larger;
+}

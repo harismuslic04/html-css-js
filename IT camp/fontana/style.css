@@ -1,0 +1,40 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: aqua;
+}
+.slika {
+  height: 200px;
+  margin-bottom: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.slika {
+  background-image: url(/fontana.jpg);
+  background-size: cover;
+}
+.main {
+  margin: 20px auto;
+  width: 400px;
+  height: 600px;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  border: 3px solid black;
+  box-shadow: 3px 3px 9px rgba(0, 0, 0);
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  line-height: 20px;
+}
+p {
+  text-align: justify;
+  line-height: 25px;
+  padding: 15px;
+  text-align: justify;
+  margin: 20px;
+}
+.icon {
+  font-size: 70px;
+}

@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  background-color: brown;
+}
+.main img {
+  height: 100%;
+}
+.second {
+  margin-left: 10px;
+}
