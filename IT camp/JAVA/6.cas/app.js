@@ -70,3 +70,41 @@ for (let i = 1; i < 21; i++)
   if (i % 2 === 0) {
     console.log(i);
   }
+
+//DOMACIII
+//1.nacin
+for (let i = 1; i < 21; i++)
+  if (i % 2 === 0) {
+    continue;
+  } else {
+    console.log(i);
+  }
+//2.nacin
+for (let i = 1; i < 21; i++)
+  if (i % 2 === 1 || i % 2 === 2) {
+    console.log(i);
+  }
+
+//2.zadatak
+for (let i = 50; i < 101; i++)
+  if (i % 5 === 0) {
+    console.log(i);
+  }
+
+// 3.zadatak
+
+// for (let i = 6; i < 15; i++)
+//   if (i * i === 49) {
+//     console.log(i);
+//   }
+
+for (let i = 6; i < 15; i++) console.log(i ** 2);
+
+//4 zadatak
+let sum = 0;
+for (let i = 10; i < 20; i++) {
+  if (i % 2 !== 0) {
+    sum += i;
+  }
+}
+console.log(sum);
