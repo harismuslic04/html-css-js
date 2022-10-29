@@ -1,0 +1,111 @@
+#include <stdio.h>
+
+int main()
+{
+    int ceo;
+    float realan;
+printf("Unesite jedan ceo broj: ");
+scanf("%d",&ceo);
+    printf("Unesite jedan realan broj: ");
+ scanf("%f",&realan);
+ printf("\nCeo broj: %d", ceo);
+ printf("\nRealan broj: %f", realan);
+ return 0;
+}
+int main()
+{
+  float a;
+  printf("Unesite jedan realan broj: ");
+  scanf("%f",&a);
+ printf("\nBroj zaokruzen na dve decimale je: %.3f", a);
+  return 0;
+}
+int main()
+{
+ printf("%c\n%2c\n%3c\n%4c\n%5c", 'A', 'B', 'C', 'D', 'E');
+}
+int main()
+{
+ char x, y, z;
+ printf("Unesite tri znaka:\n");
+ scanf("%c %c %c",&x,&y,&z);
+ printf("Promenljiva\t ASCII kod\n");
+ printf("%c\t\t %d\n",x, x);
+ printf("%c\t\t %d\n",y, y);
+ printf("%c\t\t %d\n",z, z);
+ return 0;
+}
+int main()
+{
+printf("\nTip CHAR = %d B memorije.", sizeof(char));
+ printf("\nTip UNSIGNED CHAR = %d B memorije.", sizeof(unsigned char));
+ printf("\nTip INT = %d B memorije.", sizeof(int));
+ printf("\nTip UNSIGNED INT = %d B memorije.", sizeof(unsigned int));
+ printf("\nTip LONG = %d B memorije.", sizeof(long));
+ printf("\nTip UNSIGNED LONG = %d B memorije.", sizeof(unsigned long));
+ printf("\nTip FLOAT = %d B memorije.", sizeof(float));
+ printf("\nTip DOUBLE = %d B memorije.", sizeof(double));
+
+ return 0; 
+
+}
+int main()
+{
+int a,b,pomocna;
+printf("Unesite prvi broj a= ");
+scanf("%d",&a);
+printf("Unesite drugi broj b=");
+scanf("%d",&b);
+printf("Pre zamene: \ta=%d ,b=%d",a,b);
+pomocna=a;
+a=b;
+b=pomocna;
+printf("\nPosle zamene:\ta=%d,b=%d\n\n",a,b);
+return 0;
+}
+int main()
+{
+int a,b,c;
+printf("Unesite prvi broj:");
+scanf("%d",&a);
+printf("Unesite drugi broj:");
+scanf("%d",&b);
+c = a + b;
+printf("Zbir unetih brojeva je: %d\n",c);
+return 0;
+}
+int main()
+{
+int a,b,c;
+printf("Unesite prvi broj:");
+scanf("%d",&a);
+printf("Unesite drugi broj:");
+scanf("%d",&b);
+printf("Zbir unetih brojeva je: %d\n",a+b);
+printf("Proizvod unetih brojeva je: %d\n",a*b);
+printf("Razlika unetih brojeva je: %d\n",a-b);
+printf("Kolicnik unetih brojeva je: %d\n",a/b);
+printf("Realni kolicnik unetih brojeva je:%f\n",(float)a/(float)b);
+printf("Ostatak pri deljenju uneta dva broja je:%d\n",a%b);
+return 0;
+}
+int main()
+{
+ float a,b,o,p;
+ printf("Unesite stranice pravougaonika:");
+ scanf("%f %f",&a,&b);
+ o=2*a+2*b;
+ printf("\nObim pravougaonika je: %.1f",o);
+  p=a*b;
+ printf("\nPovrsina pravougaonika je: %.1f",p);
+
+}
+#define PI 3.14
+int main()
+{
+ float r,p;
+ printf("Unesite poluprecnik kruga:");
+ scanf("%f",&r);
+ printf("\nPovrsina kruga je: %.2f",r*r*PI);
+
+}
