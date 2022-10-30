@@ -109,3 +109,177 @@ int main()
  printf("\nPovrsina kruga je: %.2f",r*r*PI);
 
 }
+#define PI 3.14
+int main()
+{
+    float r,h,p,o;
+ printf("Unesite poluprecnik osnovice valjka:");
+ scanf("%f",&r);
+ printf("Unesite visinu valjka:");
+ scanf("%f",&h);
+ p=2*r*PI*(r+h);
+ printf("Povrsina valjka je: %.4f\n",p);
+ return 0;
+}
+{
+  float a,b,x;
+  printf("Unesi a: ");
+  scanf("%f",&a);
+  printf("Unesi b: ");
+  scanf("%f",&b); 
+  x=-b/a;
+  printf("Jednacina ima oblik %.2fx + %.2f=0\n",a,b);
+  printf("Resenje jednacine je x=%.2f\n",x);
+  return 0;
+}
+#include <math.h>
+int main()
+{
+  float x,y;
+  printf("Unesite pozitivnu vrednost za x: \n");
+  scanf("%f",&x);
+  y=sqrt(x+x*x+x*x*x);
+  printf("y=%.2f",y);
+  return 0;
+}
+{
+float a1,b1,a2,b2,z1,z2,rz,iz,rz1,iz1;
+printf("Unesi a1:");
+scanf("%f",&a1);
+printf("Unesi b1:");
+scanf("%f",&b1);
+printf("Unesi a2:");
+scanf("%f",&a2);
+printf("Unesi b2:");
+scanf("%f",&b2);
+z1=a1+b1;
+z2=a2+b2;
+printf("z1=%.1f+%.1fi",a1,b1);
+printf("\nz2=%.1f+%.1fi",a2,b2);
+rz=a1+a2;
+iz=b1+b2;
+printf("\nz1+z2=%.1f+%.1fi",rz,iz);
+rz1=a1-a2;
+iz1=b1-b2;
+printf("\nz1-z2=%.1f+%.1fi",rz1,iz1);
+return 0;
+}
+double x1, x2, y1, y2, z1, z2, d;
+ printf("Unesite koordinate prve tacke <x1,y1,z1>: \n");
+ scanf("%lf %lf %lf",&x1,&y1,&z1);
+ printf("Unesite koordinate druge tacke <x2,y2,z2>: \n");
+ scanf("%lf %lf %lf",&x2,&y2,&z2);
+ d=sqrt(pow(x2-x1,2)+pow(y2-y1,2)+pow(z2-z1,2));
+ printf("\nRastojanje d = %.2f\n", d);
+ getche();
+ return 0; 
+
+
+ double xA, yA, xB, yB, xC, yC, a, b, c, s, P;
+ printf("Koordinate temena trougla\n");
+ printf("- prvo teme <xA,yA>: "); scanf("%lf%lf",&xA,&yA);
+ printf("- drugo teme <xB,yB>: "); scanf("%lf%lf",&xB,&yB);
+ printf("- trece teme <xC,yC>: "); scanf("%lf%lf",&xC,&yC);
+ a=sqrt(pow(xB-xC,2)+pow(yB-yC,2));
+ b=sqrt(pow(xC-xA,2)+pow(yC-yA,2));
+ c=sqrt(pow(xA-xB,2)+pow(yA-yB,2));
+ s=(a+b+c)/2;
+ P=sqrt(s*(s-a)*(s-b)*(s-c));
+ printf("\nPovrsina trougla: %.2f\n", P);
+ getche();
+ return 0; 
+
+{
+int xyz,x,z,y;
+printf("Unesite trocifren broj:");
+scanf("%d",&xyz);
+x=xyz/100;
+y=(xyz/10)%10;
+z=xyz%10;
+printf("Cifre unetog broja %d su %d, %d, %d\n",xyz,x,y,z);
+printf("\nSuma cifara je: %d", x+y+z); 
+return 0;
+}
+int a,b,c,p;
+printf("Unesite vrednost proizvoda u dinarima:");
+scanf("%d",&p);
+a=p/500;
+printf("Potreban broj novcanina u iznosu od 500 dinara je %d",a);
+b=(p-(a*500))/100;
+printf("\nPotreban broj novcanina u iznosu od 100 dinara je %d",b);
+c=(p-(a*500+b*100))/10;
+printf("\nPotreban broj novcanina u iznosu od 10 dinara je %d",c);
+return 0;
+
+{
+long sec, d, h, m, s;
+ printf("Unesite vreme u sekundama: ");
+ scanf("%ld",&sec);
+ d=sec/86400;
+ h=(sec%86400)/3600;
+ m=(sec%(d*86400+h*3600))/60;
+ s=(sec%(d*86400+h*3600+m*60));
+ printf("\n(d:h:m:s) %ld,%ld,%ld,%ld:",d,h,m,s);
+ return 0; 
+}
+{
+ double x;
+ int stepen,minut,sekund;
+ printf("Unesite ugao u radijanima: ");
+ scanf("%lf",&x);
+ x*=180/PI; /*konverzija u stepene*/
+ stepen=(int)x; /*zaokruzivanje broja stepeni*/
+ x-=stepen; /*izracunavanje koliko delova stepena je preostalo*/
+ x*=60; /*izracunavanje broja minuta*/
+ minut=(int)x; /*zaokruzivanje broja minuta*/
+ x-=minut; /*koliko delova minuta je ostalo*/
+ x*=60; /*izracunavanje broja sekundi*/
+ sekund=(int)x; /*zaokruzivanje broja sekundi*/
+ printf("\nstepena, minuta, sekundi [%d,%d,%d]\n", stepen, minut, sekund);
+ return 0; 
+}
+
+ int x, y;
+ int a=0, b=0;
+ printf("Na pocetku : \na = %d\nb = %d\n", a, b);
+ a++;
+ ++b;
+ printf("\nPosle : a++; ++b; \na = %d\nb = %d\n", a, b);
+ x = ++a;
+ y = b++;
+ printf("\nPosle : x = ++a; \na = %d\nx = %d\n", a, x);
+ printf("\nPosle : y = b++; \nb = %d\ny = %d\n", b, y);
+ return 0;
+
+{
+int x=1, y=2, z=3;
+ printf("Vrednost izraza x==1 je logicka %d.\n", x==1);
+ printf("Vrednost izraza y!=2 je logicka %d.\n", y!=2);
+ printf("Vrednost izraza x<=y je logicka %d.\n", x<=1);
+ printf("Vrednost izraza x>=z je logicka %d.\n", x>=1);
+ printf("Vrednost izraza x+y==z je logicka %d.\n", x+y==z);
+ printf("Vrednost izraza x>y*z je logicka %d.\n", x>y*z);
+ return 0; 
+}
+{
+int a = 5<3, b = 5>3, c = 3==5, d = 3!=5;
+ printf("5<3 - %d\n5>3 - %d\n3==5 - %d\n3!=5 - %d\n", a, b, c, d);
+ printf("Konjunkcija : 3>5 && 5>3 - %d\n", a && b);
+ printf("Disjunkcija : 3>5 || 5>3 - %d\n", a || b);
+ printf("Negacija : !(3>5) - %d\n", !a);
+ return 0; 
+}
+//!!!!!!!!!!!!!!!OVAJ MI NIJE JASAN NI SEKUNDE SEKUNDARNE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ int x, y, n;      
+ printf("Unesite dva heksadecimalna broja: ");
+ scanf("%i %i", &x, &y);
+ printf("Unesite broj pomeraja: ");
+ scanf("%d", &n);
+ printf("%#x & %#x = %#x\n", x, y, x&y);
+ printf("%#x | %#x = %#x\n", x, y, x|y);
+ printf("%#x ^ %#x = %#x\n", x, y, x^y);
+ printf("%#x << %d = %#x\n", x, n, x<<n);
+ printf("%#x >> %d = %#x\n", y, n, y>>n);
+ getche();
+ return 0; 
+
