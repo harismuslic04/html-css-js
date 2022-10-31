@@ -283,3 +283,56 @@ int a = 5<3, b = 5>3, c = 3==5, d = 3!=5;
  getche();
  return 0; 
 
+{
+ int broj;
+ printf("Unesite broj: ");
+ scanf("%d", &broj);
+ if (broj%2 == 0)
+ printf("\nUneti broj je paran.\n");
+ else
+ printf("\nUneti broj je neparan.\n");
+ return 0; 
+}
+{
+ int broj;
+ printf("Unesite broj:");
+ scanf("%d",&broj);
+ if(broj>0)
+ printf("\nBroj je pozitivan");
+ else if(broj<0)
+ printf("\nUneti broj je negativan.\n");
+  else
+ printf("\nUneti broj je jednak 0.\n");
+ return 0;
+}
+{
+ int a, b;
+ printf("Unesite broj a= ");
+ scanf("%d", &a);
+ printf("Unesite broj b= ");
+ scanf("%d", &b);
+ if(a == b)
+ printf("Brojevi su jednaki.\n");
+ else if (a > b)
+ printf("Broj a je veci od b.\n");
+ else
+ printf("Broj a je manji od b.\n");
+ return 0;
+}
+int a,b,c;
+printf("Unesite broj a:");
+scanf("%d",&a);
+printf("Unesite broj b:");
+scanf("%d",&b);
+printf("Unesite broj c:");
+scanf("%d",&c);
+if(a>b && a>c)
+printf("Broj a je najveci");
+else if(b>a && b>c)
+printf("Broj b je najveci");
+else
+printf("Broj c je najveci");
+return 0;
+}
+
+
