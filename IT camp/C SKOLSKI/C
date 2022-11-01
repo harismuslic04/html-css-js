@@ -174,7 +174,6 @@ double x1, x2, y1, y2, z1, z2, d;
  getche();
  return 0; 
 
-
  double xA, yA, xB, yB, xC, yC, a, b, c, s, P;
  printf("Koordinate temena trougla\n");
  printf("- prvo teme <xA,yA>: "); scanf("%lf%lf",&xA,&yA);
@@ -334,5 +333,147 @@ else
 printf("Broj c je najveci");
 return 0;
 }
+double x, y, z, p;    //NE KONTAAAAAAAAAAAAAAM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+ printf("Unesite tri realna broja: ");
+ scanf("%lf%lf%lf", &x, &y, &z);
+ if(x>y)
+ {
+ p=x; x=y; y=p;
+ }
+ if(x>z)
+ {
+ p=x; x=z; z=p;
+ }
+ if(y>z)
+ {
+ p=y; y=z; z=p;
+ }
+ printf("Uredjeni brojevi: %.2f %.2f %.2f\n", x, y, z);
+ return 0; 
+}
+int n,k;
+ printf(" Unesite broj: ");
+ scanf("%d",&n);
+ printf(" Unesite poziciju tog broja koju zelite da proverite: ");
+ scanf("%d",&n);
+ if((n & (1 << k))!=0)
+ printf(" Bit je 1\n");
+ else
+ printf(" Bit je 0\n");
+ return 0;
 
+ int a;
+ printf("Unesite broj bodova: ");
+ scanf ("%d", &a);
+ if (a>90)
+ printf("Ocena je 10\n");
+ else if (a>80)
+ printf("Ocena je 9\n");
+ else if (a>70)
+ printf("Ocena je 8\n");
+ else if (a>60)
+ printf ("Ocena je 7\n");
+ else if (a>50)
+ printf("Ocena je 6\n");
+ else
+ printf("Ocena je 5\n");
+ return 0; 
 
+ {
+ int a, b, x;
+ printf("Unesite donju i gornju granicu opsega: ");
+ scanf("%d %d", &a, &b);
+ printf("Unesite ceo broj x= ");
+ scanf("%d", &x);
+ if((a <= x*x) && (x*x <= b))
+ printf("\nx*x=%d pripada oblasti [%d,%d]", x*x, a, b);
+ else
+ printf("\nx*x=%d ne pripada oblasti [%d,%d]", x*x, a, b);
+ return 0; 
+}
+{
+  int x, y;
+ printf("Unesite dva cela broja: ");
+ scanf("%d %d", &x, &y);
+ if(x<y)
+ printf("\nRezultat = %d", y-x);
+ else
+ printf("\nRezultat = %d", x-y);
+return 0;
+}
+ float x;
+ int y;
+ printf("Unesite x= ");
+ scanf("%f", &x);
+ if(x==0)
+ y=0;
+ else if(x>0)
+ y=1;
+ else
+ y=-1;
+ printf("\ny= %d", y);
+ return 0;
+
+ {
+ float x, y;
+ printf ("Unesite x= "); scanf("%f", &x);
+ if(-2<x<=2)
+ y=2*x;
+ else if(5<=x<7)
+ y=3*x-1;
+ else
+ y=1/x;
+ printf("\ny= %.2f", y);
+ return 0;
+}
+double xa, ya, xb, yb, xc, yc, a, b, c, alfa, beta, gama;
+ printf("Unesite koordinate tacke A(x,y): ");
+ scanf("%lf%lf",&xa,&ya);
+ printf("Unesite koordinate tacke B(x,y): ");
+ scanf("%lf%lf",&xb,&yb);
+ printf("Unesite koordinate tacke C(x,y): ");
+ scanf("%lf%lf",&xc,&yc);
+ a = sqrt(pow(xb-xc,2) + pow(yb-yc,2));
+ b = sqrt(pow(xa-xc,2) + pow(ya-yc,2));
+ c = sqrt(pow(xa-xb,2) + pow(ya-yb,2));
+ printf("\nStranice:\n");
+ printf("a= %f\n", a);
+ printf("b= %f\n", b);
+ printf("c= %f\n", c);
+ if(a+b>c && a+c>b && b+c>a)
+ {
+ alfa = acos( (b*b+c*c-a*a) / (2*b*c) );
+ beta = acos( (c*c+a*a-b*b) / (2*c*a) );
+ gama = acos( (a*a+b*b-c*c) / (2*a*b) );
+ alfa *= 180/PI;
+ beta *= 180/PI;
+ gama *= 180/PI;
+ printf("\nUglovi:\n");
+ printf("Alfa = %.2f stepeni\n", alfa);
+ printf("Beta = %.2f stepeni\n", beta);
+ printf("Gama = %.2f stepeni\n", gama);
+ }
+ else 
+ printf("Ne moze se kreirati trougao.\n");
+ return 0; 
+
+{
+double a1, a2, b1, b2, x, y;
+ printf("Unesite koeficijente:\na1= "); scanf("%lf", &a1);
+ printf("b1= "); scanf("%lf", &b1);
+ printf("a2= "); scanf("%lf", &a2);
+ printf("b2= "); scanf("%lf", &b2);
+ printf("\nPrave:\ny=%.2fx+%.2f\ny=%.2fx+%.2f\n", a1, b1, a2, b2);
+ if(a1==a2)
+ {
+ if(b1==b2) printf("\nPrave su podudarne.");
+ else printf("\nPrave su paralelne.");
+ }
+ else
+ {
+ x=(b2-b1)/(a1-a2);
+ y=a1*x+b1;
+ printf("\nTacka preseka je x= %.2f, y= %.2f\n", x, y);
+ }
+ return 0; 
+}
