@@ -26,22 +26,16 @@
 // );
 // let Oo = 2 * (d + 2 * r) + 2 * (s + 2 * r);
 // if (d <= 120 && d >= 90 && s <= 90 && s >= 45 && r >= 2 && r <= 10) {
-//   console.log(Oo);
+//   console.log("Potrebno nam je" + Oo + "metara za ogradjivanje terena");
 //   d++;
 //   s++;
 //   r++;
-// } else "Uneli ste vece/manje dimenzije od recenih";
+// } else {
+//   console.log("Uneli ste vece/manje dimenzije od recenih");
+// }
 // 2. zadatak
 // / Korisnik unosi 2 broja:
 // Na osnovu toga koji je broj manji, iteracija se vrsi od njega do veceg broja.
 // Izracunati aritmeticku sredinu brojeva koji su deljivi sa 5.
 
-let n = +prompt("Unesite neki broj od [12,16)");
-if (n < 12 || n > 16) {
-  console.log("Uneli ste broj izvan domena");
-} else if (n >= 12 && n < 16) {
-  while (n >= 1) console.log(n);
-  console.log(n * n);
-  console.log(n - 25);
-  n--;
-}
+let broj = Number(prompt("Unesite broj iz intervala [12,16)"));
