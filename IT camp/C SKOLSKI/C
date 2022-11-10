@@ -801,3 +801,210 @@ if(br>max) max=br;
  }
  printf("\nNajveci: %.2f", max);
  return 0;   
+ {
+ int i, s=0;
+ printf("Brojevi deljivi sa 6:\n");
+ for(i=1; i<=100; i++)
+ {
+ if(i%6 == 0)
+ {
+ printf("\n%d", i);
+ s=s+i;
+ }
+ }
+printf("\n\nSuma: %d\n", s);
+ return 0;
+}
+int a, b, c, broj;
+ printf("Amstrongovi brojevi:\n");
+ for(a=1; a<=9; a++)
+ for(b=0; b<9; b++)
+ for(c=0; c<9; c++)
+ {
+ broj=100*a+10*b+c;
+ if(broj == pow(a,3)+pow(b,3)+pow(c,3))
+ printf("\n%d", broj);
+ }
+ return 0; 
+}
+{
+     int a, b, c, broj;
+ for(a=1; a<=9; a++)
+ for(b=0; b<9; b++)
+ for(c=0; c<9; c++)
+ {
+ broj=100*a+10*b+c;
+ if(broj == ((10*a+b)*(10*a+b)-c*c))
+ printf("\n%d", broj);
+ }
+ return 0; 
+}
+{
+     int a, b, c, broj;
+ for(a=1; a<=9; a++)
+ for(b=0; b<9; b++)
+ for(c=0; c<9; c++)
+ {
+     broj=100*a+10*b+c;
+     if(broj%(10*a+c)==0)
+     printf("\n%d", broj);
+ }
+ return 0; 
+}
+  int a, b, c, br,n=0;
+     float s=0;
+ for(a=1; a<=9; a++)
+ for(b=0; b<9; b++)
+ for(c=0; c<9; c++)
+  {
+      br=100*a+10*b+c;
+      if(a+b+c==5){
+         s+=br;
+         n++;
+      }
+      }
+       printf("\n%.1f",s);
+       printf("\n%d",n); 
+ return 0;
+  int i,n,delioci;
+   printf("unesi n: ");
+   scanf("%d",&n);
+   for(delioci=1;delioci<=n;delioci++)
+       if(n%delioci==0)
+   
+   printf("\ndelioci su %d",delioci);
+ return 0; 
+ {
+  int n, i, suma=0;
+ printf("n= ");
+ scanf("%d",&n);
+ for(i=1; i<n; i++)
+ {
+ if(n%i==0)
+ suma+=i;
+ }
+ printf("suma je %d",suma);
+ if(suma==n)
+ printf("\nBroj %d jeste savrsen broj.\n",n);
+ else
+ printf("\nBroj %d nije savrsen broj.\n",n);
+ return 0;
+}
+int i, br=0, n, ocena;
+ float s,srednja;
+ printf("Broj ucenika n= ");
+ scanf("%d",&n);
+ for(i=1; i<=n; i++)
+ {
+ printf("Unesi ocenu %d. ucenika: ",i);
+ scanf("%d",&ocena);
+ s+=ocena;
+ if(ocena==1) br++;
+ }
+ srednja=s/n;
+ printf("\nSrednja ocena: %.2f", srednja);
+ printf("\nBroj negativnih: %d", br);
+ return 0; 
+
+   int sat, min, sec, n;
+ printf("n= ");
+ scanf("%d",&n);
+ for(sat=0; sat<=23; sat++)
+ for(min=0; min<=59; min++)
+ for(sec=0; sec<=59; sec++)
+ {
+ if(n==(sat/10+sat%10+min/10+min%10+sec/10+sec%10))
+ printf("\n%d sat %d min %d sec", sat, min, sec);
+ }
+ return 0;
+
+  double xmin, xmax, dx, x, y;
+ printf("xmin= ");
+ scanf("%lf", &xmin);
+ printf("xmax= ");
+ scanf("%lf", &xmax);
+ printf("dx= ");
+ scanf("%lf", &dx);
+ printf("\n \tx \t y\n ===================\n");
+ for(x=xmin; x<=xmax; x+=dx)
+ {
+ y=(2*x+1)/(x*x-1);
+ printf ("%10.3f%10.3f\n", x, y);
+ }
+ return 0; 
+ {
+ float xmin, xmax, dx, x,p=1, y=1;
+int n,i;
+printf("unesi n=");
+scanf("%d",&n);
+printf("unesi xmin=");
+scanf("%f",&xmin);
+printf("unesi xmax=");
+scanf("%f",&xmax);
+printf("unesi dx=");
+scanf("%f",&dx);
+ for(x=xmin;x<=xmax;x+=dx)
+ {
+ for(i=1; i<=n; i++)
+ {
+ p*=x;
+ y*=(1+p);
+ }
+ printf("%.6f %.6f\n",x,y);
+ p=1;
+ y=1;
+}
+ return 0; 
+
+}
+{
+float s,r,dx,y;
+printf("unesi dx:");
+scanf("%f",&dx);
+for(s=0;s<=90;s+=dx){
+    r=(PI*s)/180;
+    y=sin(r);
+    printf("stepeni su:%f \t %f \n",s,y);
+}
+return 0;
+}
+{
+int n,i;
+float s=0;
+printf("n=");
+scanf("%d",&n);
+i=1;
+while(i<=n){
+    s+=i;
+    i++;
+}
+printf("suma je %.1f",s);
+return 0;
+}
+{   
+int n,i;
+float s=0;
+printf("n=");
+scanf("%d",&n);
+i=1;
+while(i<=n){
+    s+=i;
+    i+=3;
+}
+printf("suma je %.1f",s);
+return 0;
+}
+{   
+int i=1, n;
+ float s=0;
+ printf(" n= "); scanf("%d", &n);
+ while(i<=n)
+ {
+ s+=1./pow(2*i+1,2);
+ i++;
+ }
+ printf("\n s= %f\n", s);
+ return 0; 
+
+}
+
