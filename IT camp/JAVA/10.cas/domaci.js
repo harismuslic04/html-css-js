@@ -40,3 +40,5 @@ while (i < duzina) {
 //     }
 // }
 // console.log(brojac2);
+
+// Na osnovu unete recenice od strane korisnika ispisati recenicu tako da svaki karakter ide jedan ispod drugog. Dok ako je neki karakter = "a", neka se ispise broj 5. A u slucaju da je karakter jednak "s", neka se ne ispise nista.
