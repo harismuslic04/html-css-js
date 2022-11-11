@@ -1,40 +1,52 @@
-//Java Script moze prikazati podatke na nekoliko nacina:
+// JavaScript moze prikazati podatke na nekoliko nacina:
 
-//1. innerHTML
+// 1. innerHTML
 document.getElementById("p").innerHTML = "Paragraf";
 
-//2. write()
+// 2. write()
 document.write(); // najcesci nacin za testiranje nekog koda
 
-//3.alert()
+// 3. alert() - upozorenje
 alert("Zdravo");
 
-//4.console.log() p - ispitivanje u konzoli
-console.log("Poruka za ispis u konzoli");
+// 4. console.log() - ispisivanje u konzoli
+console.log("Poruka za ispis u konzoli.");
 
 // Pravila nazivanja promenljivih:
 
-//Promeljiva u JS mora poceti sa nekim od sledecih znakova:
-//1.Slovo (veliko ili malo) A-Z,a-z
-//2. $ moze biti pocetni karakter neke promenljive
-//3, _ moze biti -||-
+// Promenljiva u JavaScriptu mora poceti sa nekim od sledecih znakova:
 
-//Broj moze biti sadrzan u nazivu promenljive,ali promenljiva ne sme pocinjati brojem.
-proseOcena = 4.14; //preporucljiv nacin zapisivanja promenljive
-prosek_ocena = 4.14; //korektno
-ProsekOcena = 4.14; //korektno
+// 1. Slovo (veliko ili malo) A-Z, a-z
+// 2. $ znak moze biti pocetni karakter neke promenljive,
+// 3. _
 
-//postoje 4 nacina za deklarisanje neke promenljive:
-//1. prom=12 -dodeljivanje vrednosti bez da smo prethodno izvrsili deklaraciju
+// Broj moze biti sadrzan u nazivu neke promenljive,
+// ALI PROMENLJIVA NE SME POCINJATI BROJEM.
 
-//2. Koriscenjem var keyword(rezervisane reci)
+// prom1 = "neki string" jeste korektno
+// 2prom = "neki string" nije korektno
+
+// prosek ocena = 4.14
+prosekOcena = 4.14; // preporucljiv nacin zapisivanja promenljive
+prosek_ocena = 4.14; // korektno
+ProsekOcena = 4.14; // korektno
+
+// Postoje 4 nacina za deklarisanje neke promenljive:
+
+// 1. Dodeljivanje vrednosti bez da smo prethodno izvrsili deklaraciju:
+//  prom = 12
+
+// 2. Koriscenjem var keyword (rezervisane reci) -
 // var je koriscena na starijim browserima (sve se manje koristi)
-//var a=5
+// var a = 5
 
-//3.koriscenjem let keyword (rezervisane reci) -
-//let se najcesce koristi kada postoji sansa da se vrednost date promenljive menja.
+// 3. Koriscenjem let keyword (rezervisane reci) -
+// let se najcesce koristi kada postoji sansa da se
+// vrednost date promenljive menja.
 
-//4.koriscenjem const keyword (rezervisane reci) -
-//const se koristi za definisanje konstanti koje nece menjati vrednost
+// 4. Koriscenjem const keyword (rezervisane reci) -
+// const se koristi za definisanje konstanti
+// koje nece menjati vrednost.
 
-//Promenljive odnosno varijable predstavljaju kontejnere za skladistenje vrednosti.
+// Promenljive (varijable) predstavljaju kontejnere
+// za skladistenje vrednosti.

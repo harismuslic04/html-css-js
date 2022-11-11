@@ -1,24 +1,39 @@
-//tipovi podataka u javi
-//za upotrebu tipa neke promenjlive (varijable) se koristi typeproof operator.
-// primitivni tipova podataka
+// TIPOVI PODATAKA U JAVASCRIPTU //
 
-// 1.Stringovi - prestavljju niz karaktera koje je zapisan unutar navodnika
+// Za proveru tipa neke promenljive (varijable) se koristi typeof operator.
+
+// PRIMITIVNI TIPOVI PODATAKA //
+
+// 1. string - predstavljaju niz karaktera koji je zapisan unutar navodnika
 // (obicnih ili duplih).
-// naucite java s knjiha obavezna
-// you dont know js na engleski kniga
-console.log("ovo neki string unutar obicnih navodnika");
-//number predstavlja broj koji moze biti zapisan sa ili bez decimalnog zapisa
-//ne pravi se razlika izmedju celih realnih i kompleksnih brojeva
-console.log(typeof -5.67);
+
+console.log("Ovo je neki string napisan unutar duplih navodnika.");
+console.log(typeof "Ovo je neki string napisan unutar duplih navodnika.");
+
+console.log("Ovo je neki string napisan unutar obicnih navodnika.");
+console.log(typeof "Ovo je neki string napisan unutar obicnih navodnika.");
+
+console.log(`Ovo je neki string napisan unutar obicnih navodnika.`);
+
+// 2. number - predstavlja broj, koji moze biti zapisan sa ili bez decimalnog zareza.
+// Ne pravi se razlika izmedju celih, realnih i kompleksnih brojeva.
+
+console.log(14);
+console.log(typeof 14);
+
 console.log(-5.67);
+console.log(typeof -5.67);
 
-console.log(BigInt(4739182743812472184371894712));
-console.log(typeof BigInt(4739182743812472184371894712));
+// 3. BigInt - se koristi za skladistenje brojeva cija granica prelazi granicu
+// number tipa podatka.
 
-//4. tip boolean - cesto se koristi
+console.log(BigInt(9855241865548565485656));
+console.log(typeof BigInt(9855241865548565485656));
 
-// boolean je logicki entitet koji ima dve vrednosti:true i false
-//najcesce se koristi u kondicionalima i ima veliku primenu (if naredbe)
+// 4. boolean - logicki entitet koji moze imati dve vrednosti:
+// true,
+// false.
+// Najcesce se koristi u kondicionalima (if naredbe) i ima veliku primenu.
 
 daLiPadaKisa = false;
 
@@ -26,58 +41,87 @@ console.log(true);
 console.log(typeof true);
 console.log(daLiPadaKisa);
 
-// 5 undefined je tip podatka koji se javlja kada imamo definisanu neku promenljivu ali joj nismo dodelili vrednost .
-// u tom slucaju i vrednost i tip promenljive je undefined
+// 5. undefined - je tip podatka koji se javlja kada imamo deklarisanu neku promenljivu,
+// ali joj nismo dodelili vrednost.
+//  U tom slucaju i vrednost i tip promenljive je undefined.
 
-let prom1; //deklarisanje promenljive
-prom1 = 54; // dodela vrednosti promenljivoj
+let prom1; // deklarisanje promenljive
+prom1 = 54; // inicijalizacija (dodela vrednosti) promenljive
 
 // 6. null - je tip podatka za nepostojecu promenljivu ili za promenljivu
-// kojoj smo dodelili nekorektnu vrednost
-let skola;
-console.log(typeof skola);
+// kojoj smo dodelili nekorektnu vrednost.
 
-//7. Symbol-Novi tip podatka u JavaScriptu koji se koristi za dodeljivanje jedinstvene
-//ili anonimne vrednost.
+skola = null;
+console.log(skola);
+console.log(typeof skola); // rezultat je Object
 
-//primitivni tipovi podataka se koriste kada imamo promenljivu(varijablu)
-//sa samo jednom vrednoscu
+// 7. Symbol - Novi tip podatka u JavaScriptu koji se koristi za dodeljivanje
+//  jedinstvene ili anonimne vrednosti.
 
-//NEPRIMITIVNI TIPOVI PODATAKA//
+x = Symbol("Danas je lepo vreme.");
+console.log(x);
+y = Symbol("Danas je lepo vreme.");
+console.log(y);
 
-//Za promenljive (varijable) koje mogu skladistiti vise vrenosti ili neke
-//kompleksne vrednosti se koriste neprimitivni tipovi podataka
+console.log(x === y); // razlikuju se
 
-//Kada ispitujemo tip podatka za neku neprimitivnu promenljivu u JavaScriptu
-//dovijamo Object za tip.
+// Primitivni tipovi podataka se koriste kada imamo promenljivu (varijablu),
+// sa samo jednom vrednoscu.
 
-//1. Nizovi (Arrays) - neprimitivni tip podatka koji sluzi za skladistenje vise vrednosti
-//U Java Scriptu niz moze sadrzati elemente razlicitog tipa.
+// NEPRIMITIVNI TIPOVI PODATAKA //
 
-niz1 = ["Sumeja", "Haris", "Sumeja", "Haris", "Sumeja"];
+// Za promenljive (varijable) koje mogu skladistiti vise vrednosti, ili neke
+// kompleksne vrednosti se koriste neprimitivni tipovi podataka.
+
+// Kada ispitujemo tio podatka za neku neprimitivnu promenljivu u JavaScriptu
+// dobijamo Object za tip.
+
+// 1. Nizovi (Arrays) - neprimitivni tip podatka koji sluzi za skladistenje vise
+// vrednosti.
+// U JavaScriptu niz moze sadrzati elemente razlicitog tipa.
+
+niz1 = ["Mitar", "Dzenan", "Haris", "Hamed", "Nikola"];
+console.log(niz1);
 
 niz2 = ["Hamed", 15, false];
+console.log(niz2);
 
-//Jos jedan nacin definisanja niza:
-niz3 = new Array("Sumeja", "Haris", "Sumeja", "Haris", "Sumeja");
+// Jos jedan nacin definisanja niza:
+niz3 = new Array("Mitar", "Dzenan", "Haris", "Hamed", "Nikola");
 console.log(niz3);
 
-//2. Object (Objects) - su glavni neprimitivni tipovi podatka u JS.
-//Objekti se zapisuju po principu name:value pair(ime:vrednost par)
+// 2. Objekti (Objects) - su GLAVNI NEPRIMITIVNI TIP PODATKA U JAVASCRIPTU.
+// Objekti se zapisuju po principu name:value pair (ime:vrednost par).
 
 obj1 = {
   ime: "Mehmed",
   prezime: "Kucevic",
   godine: 15,
   skola: "Dva Heroja",
-  punoletstvo: false,
+  punoletnost: false,
 };
 console.log(obj1.godine);
 
-//3.Setovi (Sets) - slicni nizovima sa razlkkom da sene moze da sadrzi duplikate
-set1 = new Set(["Alen", "nebitno", "nebitno2", "nebitno3"]);
+obj2 = new Object({
+  ime: "Amer",
+  prezime: "Honic",
+  godine: 19,
+  skola: "DUNP",
+  punoletnost: true,
+});
+
+console.log(obj2.skola);
+
+// 3. Setovi (Sets) - slicni nizovima sa razlikom da set ne moze da sadrzi duplikate.
+
+set1 = new Set(["Alen", "Hasan", "Miona", "Amir", "Alen"]); // nisu dozvoljeni duplikati
 console.log(set1);
 
-//4.Mape(Maps) - su slicni objektima,sa nesto drugacijim nacinom definisanja
+// 4. Mape (Maps) - su slicni objektima, sa nesto drugacijim nacinom definisanja.
 
-map1 = new Map([["jabuke", 50][("kruske", 50)][("jagode", 50)]]);
+map1 = new Map([
+  ["jabuke", 50],
+  ["kruske", 60],
+  ["jagode", 80],
+]);
+console.log(map1);
