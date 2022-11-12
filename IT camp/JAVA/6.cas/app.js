@@ -81,3 +81,10 @@ for (let broj = 2; broj <= 20; broj += 2) {
 // Ispisati dvostruku vrednost prirodnih brojeva od 6 do 14.
 // 4.
 // Suma neparnih prirodnih brojeva od 10 do 20.
+let s = 0;
+for (i = 10; i < 21; i++) {
+  if (i % 2 !== 0) {
+    s += i;
+  }
+}
+console.log(s);

@@ -1,127 +1,192 @@
-// TIPOVI PODATAKA U JAVASCRIPTU //
+// // TIPOVI PODATAKA U JAVASCRIPTU //
 
-// Za proveru tipa neke promenljive (varijable) se koristi typeof operator.
+// // Za proveru tipa neke promenljive (varijable) se koristi typeof operator.
 
-// PRIMITIVNI TIPOVI PODATAKA //
+// // PRIMITIVNI TIPOVI PODATAKA //
 
-// 1. string - predstavljaju niz karaktera koji je zapisan unutar navodnika
-// (obicnih ili duplih).
+// // 1. string - predstavljaju niz karaktera koji je zapisan unutar navodnika
+// // (obicnih ili duplih).
 
-console.log("Ovo je neki string napisan unutar duplih navodnika.");
-console.log(typeof "Ovo je neki string napisan unutar duplih navodnika.");
+// console.log("Ovo je neki string napisan unutar duplih navodnika.");
+// console.log(typeof "Ovo je neki string napisan unutar duplih navodnika.");
 
-console.log("Ovo je neki string napisan unutar obicnih navodnika.");
-console.log(typeof "Ovo je neki string napisan unutar obicnih navodnika.");
+// console.log("Ovo je neki string napisan unutar obicnih navodnika.");
+// console.log(typeof "Ovo je neki string napisan unutar obicnih navodnika.");
 
-console.log(`Ovo je neki string napisan unutar obicnih navodnika.`);
+// console.log(`Ovo je neki string napisan unutar obicnih navodnika.`);
 
-// 2. number - predstavlja broj, koji moze biti zapisan sa ili bez decimalnog zareza.
-// Ne pravi se razlika izmedju celih, realnih i kompleksnih brojeva.
+// // 2. number - predstavlja broj, koji moze biti zapisan sa ili bez decimalnog zareza.
+// // Ne pravi se razlika izmedju celih, realnih i kompleksnih brojeva.
 
-console.log(14);
-console.log(typeof 14);
+// console.log(14);
+// console.log(typeof 14);
 
-console.log(-5.67);
-console.log(typeof -5.67);
+// console.log(-5.67);
+// console.log(typeof -5.67);
 
-// 3. BigInt - se koristi za skladistenje brojeva cija granica prelazi granicu
-// number tipa podatka.
+// // 3. BigInt - se koristi za skladistenje brojeva cija granica prelazi granicu
+// // number tipa podatka.
 
-console.log(BigInt(9855241865548565485656));
-console.log(typeof BigInt(9855241865548565485656));
+// console.log(BigInt(9855241865548565485656));
+// console.log(typeof BigInt(9855241865548565485656));
 
-// 4. boolean - logicki entitet koji moze imati dve vrednosti:
-// true,
-// false.
-// Najcesce se koristi u kondicionalima (if naredbe) i ima veliku primenu.
+// // 4. boolean - logicki entitet koji moze imati dve vrednosti:
+// // true,
+// // false.
+// // Najcesce se koristi u kondicionalima (if naredbe) i ima veliku primenu.
 
-daLiPadaKisa = false;
+// daLiPadaKisa = false;
 
-console.log(true);
-console.log(typeof true);
-console.log(daLiPadaKisa);
+// console.log(true);
+// console.log(typeof true);
+// console.log(daLiPadaKisa);
 
-// 5. undefined - je tip podatka koji se javlja kada imamo deklarisanu neku promenljivu,
-// ali joj nismo dodelili vrednost.
-//  U tom slucaju i vrednost i tip promenljive je undefined.
+// // 5. undefined - je tip podatka koji se javlja kada imamo deklarisanu neku promenljivu,
+// // ali joj nismo dodelili vrednost.
+// //  U tom slucaju i vrednost i tip promenljive je undefined.
 
-let prom1; // deklarisanje promenljive
-prom1 = 54; // inicijalizacija (dodela vrednosti) promenljive
+// let prom1; // deklarisanje promenljive
+// prom1 = 54; // inicijalizacija (dodela vrednosti) promenljive
 
-// 6. null - je tip podatka za nepostojecu promenljivu ili za promenljivu
-// kojoj smo dodelili nekorektnu vrednost.
+// // 6. null - je tip podatka za nepostojecu promenljivu ili za promenljivu
+// // kojoj smo dodelili nekorektnu vrednost.
 
-skola = null;
-console.log(skola);
-console.log(typeof skola); // rezultat je Object
+// skola = null;
+// console.log(skola);
+// console.log(typeof skola); // rezultat je Object
 
-// 7. Symbol - Novi tip podatka u JavaScriptu koji se koristi za dodeljivanje
-//  jedinstvene ili anonimne vrednosti.
+// // 7. Symbol - Novi tip podatka u JavaScriptu koji se koristi za dodeljivanje
+// //  jedinstvene ili anonimne vrednosti.
 
-x = Symbol("Danas je lepo vreme.");
-console.log(x);
-y = Symbol("Danas je lepo vreme.");
-console.log(y);
+// x = Symbol("Danas je lepo vreme.");
+// console.log(x);
+// y = Symbol("Danas je lepo vreme.");
+// console.log(y);
 
-console.log(x === y); // razlikuju se
+// console.log(x === y); // razlikuju se
 
-// Primitivni tipovi podataka se koriste kada imamo promenljivu (varijablu),
-// sa samo jednom vrednoscu.
+// // Primitivni tipovi podataka se koriste kada imamo promenljivu (varijablu),
+// // sa samo jednom vrednoscu.
 
-// NEPRIMITIVNI TIPOVI PODATAKA //
+// // NEPRIMITIVNI TIPOVI PODATAKA //
 
-// Za promenljive (varijable) koje mogu skladistiti vise vrednosti, ili neke
-// kompleksne vrednosti se koriste neprimitivni tipovi podataka.
+// // Za promenljive (varijable) koje mogu skladistiti vise vrednosti, ili neke
+// // kompleksne vrednosti se koriste neprimitivni tipovi podataka.
 
-// Kada ispitujemo tio podatka za neku neprimitivnu promenljivu u JavaScriptu
-// dobijamo Object za tip.
+// // Kada ispitujemo tio podatka za neku neprimitivnu promenljivu u JavaScriptu
+// // dobijamo Object za tip.
 
-// 1. Nizovi (Arrays) - neprimitivni tip podatka koji sluzi za skladistenje vise
-// vrednosti.
-// U JavaScriptu niz moze sadrzati elemente razlicitog tipa.
+// // 1. Nizovi (Arrays) - neprimitivni tip podatka koji sluzi za skladistenje vise
+// // vrednosti.
+// // U JavaScriptu niz moze sadrzati elemente razlicitog tipa.
 
-niz1 = ["Mitar", "Dzenan", "Haris", "Hamed", "Nikola"];
-console.log(niz1);
+// niz1 = ["Mitar", "Dzenan", "Haris", "Hamed", "Nikola"];
+// console.log(niz1);
 
-niz2 = ["Hamed", 15, false];
-console.log(niz2);
+// niz2 = ["Hamed", 15, false];
+// console.log(niz2);
 
-// Jos jedan nacin definisanja niza:
-niz3 = new Array("Mitar", "Dzenan", "Haris", "Hamed", "Nikola");
-console.log(niz3);
+// // Jos jedan nacin definisanja niza:
+// niz3 = new Array("Mitar", "Dzenan", "Haris", "Hamed", "Nikola");
+// console.log(niz3);
 
-// 2. Objekti (Objects) - su GLAVNI NEPRIMITIVNI TIP PODATKA U JAVASCRIPTU.
-// Objekti se zapisuju po principu name:value pair (ime:vrednost par).
+// // 2. Objekti (Objects) - su GLAVNI NEPRIMITIVNI TIP PODATKA U JAVASCRIPTU.
+// // Objekti se zapisuju po principu name:value pair (ime:vrednost par).
 
-obj1 = {
-  ime: "Mehmed",
-  prezime: "Kucevic",
-  godine: 15,
-  skola: "Dva Heroja",
-  punoletnost: false,
-};
-console.log(obj1.godine);
+// obj1 = {
+//   ime: "Mehmed",
+//   prezime: "Kucevic",
+//   godine: 15,
+//   skola: "Dva Heroja",
+//   punoletnost: false,
+// };
+// console.log(obj1.godine);
 
-obj2 = new Object({
-  ime: "Amer",
-  prezime: "Honic",
-  godine: 19,
-  skola: "DUNP",
-  punoletnost: true,
-});
+// obj2 = new Object({
+//   ime: "Amer",
+//   prezime: "Honic",
+//   godine: 19,
+//   skola: "DUNP",
+//   punoletnost: true,
+// });
 
-console.log(obj2.skola);
+// console.log(obj2.skola);
 
-// 3. Setovi (Sets) - slicni nizovima sa razlikom da set ne moze da sadrzi duplikate.
+// // 3. Setovi (Sets) - slicni nizovima sa razlikom da set ne moze da sadrzi duplikate.
 
-set1 = new Set(["Alen", "Hasan", "Miona", "Amir", "Alen"]); // nisu dozvoljeni duplikati
-console.log(set1);
+// set1 = new Set(["Alen", "Hasan", "Miona", "Amir", "Alen"]); // nisu dozvoljeni duplikati
+// console.log(set1);
 
 // 4. Mape (Maps) - su slicni objektima, sa nesto drugacijim nacinom definisanja.
 
-map1 = new Map([
-  ["jabuke", 50],
-  ["kruske", 60],
-  ["jagode", 80],
-]);
-console.log(map1);
+// map1 = new Map([
+//   ["jabuke", 50],
+//   ["kruske", 60],
+//   ["jagode", 80],
+// ]);
+// console.log(map1);
+// let i = 0;
+// let broj1 = +prompt("unesite broj");
+// if (isNaN(broj1)) {
+//   console.log("Unesite realan broj");
+// } else {
+//   broj1 = broj1 ** 2;
+//   console.log(broj1);
+// }
+// let broj1 = Number(prompt("Unesite neki broj:"));
+// if (isNaN(broj1) || broj1 < 1) {
+//   console.log("Niste uneli konkretnu vrednost za broj");
+// }
+// for (let i = 1; i <= broj1; i++) {
+//   console.log(broj1 * broj1);
+// }
+
+// for (i = 1; i < 101; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FIZZ.BUZZ");
+//   } else if (i % 5 === 0) {
+//     console.log("BUZZ");
+//   }
+//   if (i % 3 === 0) {
+//     console.log("FIZZ ");
+//   } else {
+//     console.log(i);
+//   }
+// }
+for (let i = 1; i <= 100; i++) {
+  if (i % 5 === 0 && i % 3 === 0) {
+    console.log("FIZZ BUZZ");
+  } else if (i % 3 === 0) {
+    console.log("FIZZ");
+  } else if (i % 5 === 0) {
+    console.log("BUZZ");
+  } else {
+    console.log(i);
+  }
+}
+
+let recenica15 =
+  "Nakon danasnjeg testa cemo znati ko ce nastaviti sa drugim ciklusom it campa.";
+let recenica13 = "";
+for (i = 0; i < recenica15.length; i++) {
+  if (
+    recenica15[i] === "a" ||
+    recenica15[i] === "e" ||
+    recenica15[i] === "i" ||
+    recenica15[i] === "o" ||
+    recenica15[i] === "u"
+  ) {
+    recenica13 += recenica15[i].toUpperCase();
+  } else {
+    recenica13 += recenica15[i];
+  }
+}
+console.log(recenica13);
+
+let broj1 = Number(prompt("Unesite neki broj:"));
+if (isNaN(broj1) || broj1 < 1) {
+  console.log("Niste uneli konkretnu vrednost za broj");
+}
+for (let i = 1; i <= broj1; i++) {
+  console.log(broj1 * broj1);
+}

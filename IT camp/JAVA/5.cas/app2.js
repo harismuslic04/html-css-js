@@ -84,7 +84,24 @@ switch (broj) {
 // Povrsinu kvadrata ako su uneti brojevi jednaki,
 // Povrsinu pravougaonika ako su uneti brojevi razliciti.
 
+let broj1 = +prompt("Unesite broj a");
+let broj2 = +prompt("Unesite broj b");
+if (broj1 == broj2) {
+  let c = broj1 * broj2;
+  console.log("Povrsina kvadrata je" + c);
+} else {
+  let c = broj1 * broj2;
+  console.log("povrsina pravougaonika je" + c);
+}
 // 2. Zadatak
 // Korisnik unosi dva realna broja x i y. Napisati program koji izracunava i stampa
 // kolicnik x/y, ako je broj y razlicit od nule,
 // a inace ispisuje poruku: Deljenje je nemoguce.
+let x = +prompt("Unesite x");
+let y = +prompt("Unesite y");
+let c = x / y;
+if (y == 0) {
+  console.log("deljenje nije moguce");
+} else {
+  console.log(c);
+}
