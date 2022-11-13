@@ -1146,3 +1146,74 @@ int i=0;
  printf("Suma = %.1f",s);
  return 0;
 }
+{
+ int znak=1, i=1, n;
+ float suma=0;
+ printf("\n n= ");
+ scanf("%d",&n);
+ while(i<=n)
+ {
+ suma+=(float)znak/i;
+ i++;
+ znak=-znak;
+ }
+ printf("\n S= %.3f\n", suma);
+ 
+ return 0; 
+}
+{
+int n=1;
+ float suma=0, clan;
+ clan=1;
+ while(clan>1e-4)
+ {
+ suma=suma+clan;
+ n++;
+ clan=1.0/(n*n);
+ }
+ printf("\n S= %.3f\n", suma);
+ return 0; 
+}
+{
+int a, b;
+ printf(" a= ");
+ scanf("%d",&a);
+ printf(" b= ");
+ scanf("%d", &b);
+ while(a!=b)
+ {
+ if(a>b) a-=b;
+ else b-=a;
+ }
+ printf("\n NZD=: %d\n",a);
+ return 0; 
+}
+{
+ int broj, k, suma=0,ostatak;
+ printf(" unesite broj: ");
+ scanf("%d", &broj);
+ k=broj;
+ while(k>=0.1){
+     ostatak=k%10;
+     k/=10;
+     printf("%d",ostatak);
+ }
+ return 0;
+}
+int a, b, c, zbir;
+ printf(" Pitagorini brojevi:\n");
+ for(a=1;a<=20;a++)
+ {
+ for(b=1;b<=20;b++)
+ {
+ zbir=a*a+b*b;
+ c=1;
+ while(c*c<=zbir)
+ {
+ if(c*c==zbir)
+ printf(" a=%2d b=%2d c=%2d\n", a,b,c);
+ c++;
+ }
+ }
+ }
+ return 0;
