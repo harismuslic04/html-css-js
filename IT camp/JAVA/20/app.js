@@ -57,8 +57,9 @@ const lastSpace = (string) => {
   const index = string.lastIndexOf(" ");
   if (index === -1) {
     return `U datom stringu nema razmaka.`;
+  } else {
+    return `Poslednji razmak se nalazi na ${index} mestu.`;
   }
-  return `Poslednji razmak se nalazi na ${index} mestu.`;
 };
 
 console.log(lastSpace("Sta ako ima vise razmaka"));

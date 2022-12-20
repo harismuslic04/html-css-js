@@ -27,10 +27,10 @@ const string2 = "Danas je bilo lepo vreme.";
 // 3. ` `
 const string3 = `Danas je bilo lepo vreme.`;
 
-// \ na kreju reda:
+// \ na kraju reda:
 const string5 =
   "Ovo ce da bude jedan dugacki string. \
-Cela poenta je da prikazemo jedan te isti string u vise redova.";
+   Cela poenta je da prikazemo jedan te isti string u vise redova.";
 console.log(string5);
 // sa \ ne mozemo nastaviti liniju koda, vec samo string
 // \n prikazivanje stringa:

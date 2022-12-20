@@ -1,7 +1,7 @@
 // replace() metoda vrsi zamenu nekoliko karaktera datog stringa. Ima 2 argumenta.
 // Po defaultu replace() metoda menja samo prvo pronalazenje datog stringa.
 
-const recenica = "Danas smo podelili sertifikate za HTML, CSS i JavaScript.";
+const recenica = "DanaS smo podelili sertifikate za HTML, CSS i JavaScript.";
 
 let recenica2 = recenica.replace("Danas", "Juce");
 console.log(recenica2);
@@ -12,7 +12,7 @@ console.log(recenica2);
 recenica2 = recenica.replace(/s/g, "t");
 console.log(recenica2);
 // 1. i (insensitive)
-recenica2 = recenica.replace(/s/i, "A");
+recenica2 = recenica.replace(/s/i, "a");
 console.log(recenica2);
 recenica2 = recenica.replace(/s/gi, "A");
 console.log(recenica2);

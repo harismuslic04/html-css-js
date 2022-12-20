@@ -17,7 +17,7 @@ const novaRecenica = "Spava mi se.";
 const char1 = novaRecenica.charAt(3);
 const char11 = novaRecenica.charAt(46); // rezultat ce biti ""
 console.log(char1);
-
+console.log(char11);
 const char2 = novaRecenica.charCodeAt(3);
 console.log(char2);
 

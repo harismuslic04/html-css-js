@@ -82,7 +82,4 @@ function task(recenica) {
     return `Broj pojavljivanja reci "kuca" unutar datog stringa je ${brojac}.`;
   }
 }
-console.log(task("skola je uticala da Alen i Hatidza spavaju za vreme casa."));
-console.log(task("Automobil je prodat!"));
-console.log(task("Ja zivim u stanu."));
-console.log(task("kuca kucakuca kuca kuca."));
+console.log(task("kuca kucakuca kuca kuca kuca"));

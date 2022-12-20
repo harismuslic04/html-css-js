@@ -17,7 +17,7 @@ console.log(niz3);
 const recenica2 =
   "Decembar je poslednji mesec u godini. U decembar pocinje zima, decembar je najhladniji mesec u godini.";
 
-const niz4 = recenica2.split(/decembar/i);
+const niz4 = recenica2.split("decembar");
 console.log(niz4);
 
 // Search metode:
