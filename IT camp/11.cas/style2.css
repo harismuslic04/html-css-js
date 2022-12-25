@@ -1,39 +1,67 @@
 * {
   margin: 0;
-}
-.main {
-  width: 200px;
-  height: 200px;
-}
-.main:nth-of-type(1) {
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-  padding: 20px;
   box-sizing: border-box;
+}
+
+/* .main:nth-of-type(1) {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background-color: #87ceeb;
+  padding: 20px;
   overflow: auto;
 }
 .main:nth-of-type(2) {
+  margin: auto;
   width: 200px;
   height: 200px;
-  background-color: yellow;
-  /* display: none; ovako sakrivamo sadrzaj */
-  /* visibility: hidden; da ga sakrijemo ali ostaje bela praznina */
+  background-color: #ffb0ef;
 }
 .main:nth-of-type(3) {
+  margin: auto;
   width: 200px;
   height: 200px;
-  background-color: orange;
+  background-color: #535582;
+} */
+
+.main {
+  /* margin: auto; */
+  width: 300px;
+  height: 200px;
+  background-color: #87ceeb;
+  padding: 20px;
+  overflow: hidden;
+  /* display: block; defaultna vrednost za div */
+  /* display: inline; ako je display inline onda gubimo mogusnost definisanja odredjenih stilova,
+  kao sto su width, height, margin, padding,... */
+  display: inline-block;
 }
-/* p {
+
+.main:nth-of-type(2) {
+  background-color: #5d7576;
+  /* display none je jedan od nacina da sakrijemo sadrzaj na stranici */
+  display: none;
+  /* preko visibility hidden ce se sakriti sadrzaj, ali i dalje zauzima prostor na stranici. */
+  /* visibility: hidden; */
+}
+
+.main:nth-of-type(3) {
+  background-color: #ff7f50;
+}
+
+.main p {
   line-height: 30px;
-} za razmak izmedju redova */
+}
+
 .second {
   margin: auto;
   width: 700px;
   height: 450px;
-  background-image: url(/pozadina.jpg);
-  /* background-repeat: no-repeat; ako je slika mala,da se ne ponavlja kako bi zauzela celo mesto */
-  /* background-size: 100%; jedna jedinica se odnosi na sirinu,a ako su dve druga je na visinu[p
-   */
+  background-image: url(./back3.png), url(./back2.jpg);
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  /* background-size: cover; */
+  /*background-size: 100%;  jedna vrednost predstavlja sirinu */
+  /*background-size: 100% 50%;  prva vrednost se odnosi na sirinu, druga na visinu */
+  background-size: 100% 50%, 100% 100%;
 }

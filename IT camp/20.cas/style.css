@@ -1,57 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Farsan", cursive;
+  font-family: "Montserrat", sans-serif;
 }
+
 .main {
-  width: 80%;
   margin: auto;
+  width: 80%;
   height: 65vh;
-  background-color: rgb(9, 193, 132);
+  background-color: #7fffd4;
 }
+
 /* .main > h1 {
-    color: #ff0000;
-  }
-  .main + p {
-    color: rgb(242, 247, 242);
-  } */
-.main h1 {
-  color: red;
+  color: #ff0000;
 }
-/* tipovi koji su podrzani u media query su: */
-/* 1. all(odnosi se na sve tipove i to je nesto sto se uvek koristi!),2.screen(odnosi se konkretno samo na ekranima),3.print(odnosi se na stilove prilikom stampanja stranice),4.speech(odnosi se na stranice koje reproduktuju neki zvuk) */
-/* defaultna vrednost je all za svaki media query */
+.main + p {
+  color: green;
+} */
+
+.main h1 {
+  color: #ff0000;
+}
+
+/* Tipovi koji su podrzani u media query su: */
+/* 1. all (odnosi se na sve tipove i to je nesto sto cemo gotovo uvek koristiti) - defaultna vrednost*/
+/* 2. screen (odnosi se konkretno samo na prikaz na ekranima) */
+/* 3. print (odnosi se na stilove prilikom stampanja stranice) */
+/* 4. speech (odnosi se na stranice koje reprodukuju neki zvuk) */
+
 @media (min-width: 501px) and (max-width: 678px) {
   body {
     font-size: 0.9rem;
   }
+
   .main {
-    background-color: red;
-    text-align: center;
     width: 100%;
+    text-align: center;
+    background-color: #f9c5c5;
     height: 50vh;
   }
+
   .main h1 {
-    color: blue;
+    color: #008b8b;
   }
 }
 
-/* @media (orientation:portrait),ovo je kad je telefon uspravno,a landscape kad se okrene { */
+/* @media (orientation: portrait)  */
+/* @media (orientation: landscape)  */
+
 @media (max-width: 500px) {
   body {
     font-size: 0.8rem;
   }
+
   .main {
-    overflow: auto;
-    height: 42vh;
     width: 100%;
     padding: 1rem;
+    height: 42vh;
+    overflow: auto;
   }
+
   .main h1 {
-    color: rgb(245, 208, 114);
+    color: #b8860b;
   }
 }
-/* moraju prvo stilovi za sajt kada mi gledamo preko kompjutera,pa ona media query!!!!!!!!!!!!! */
-/* jer css funkcionise na sistemu ide redom odozgo na dole! */

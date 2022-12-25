@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kalam", cursive;
+}
+
+header {
+  width: 100vw;
+  height: 20vh;
+  background-color: #d8bfd8;
+  position: relative;
+}
+
+.img {
+  width: 10%;
+  height: 90%;
+  margin-left: 2%;
+  margin-top: 0.5%;
+}
+
+.links {
+  display: inline-block;
+  margin-left: 15rem;
+  position: absolute;
+  bottom: 3rem;
+}
+
+.links a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #1453ff;
+  padding-right: 0.7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.links a:hover {
+  padding: 0.5rem;
+  background-color: #7fffd4;
+  border-radius: 10px;
+}
+
+.links a:visited {
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: rgb(47, 89, 75);
+}
+
+.links a:active {
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.left {
+  margin-top: 6rem;
+  margin-left: 5rem;
+  width: 35%;
+  height: 50vh;
+  background-color: #efe3ff;
+  padding: 5rem;
+  float: left;
+}
+
+.left h2 {
+  font-size: 3rem;
+}
+
+.right {
+  margin-top: 6rem;
+  margin-right: 5rem;
+  width: 35%;
+  height: 50vh;
+  padding: 3rem;
+  float: right;
+}
+
+.right input {
+  width: 15rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: none;
+  margin: 0.3rem;
+  background-color: #ffe5ff;
+}
+
+.right button {
+  width: 15rem;
+  height: 2rem;
+  border-radius: 8px;
+  border: none;
+  margin: 0.3rem;
+  background-color: #1877f2;
+  cursor: pointer;
+}
+
+hr {
+  width: 15rem;
+}
+
+.right button:nth-of-type(2) {
+  background-color: #00e222;
+}

@@ -2,32 +2,72 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 .main {
-  background-color: yellow;
-  height: 70vh;
-  width: 50%;
+  margin: 2rem auto;
+  width: 95%;
+  height: 250vh;
+  background: #1dafdc;
+  position: relative;
 }
+
 .box1 {
-  height: 140px;
-  width: 140px;
-  background-color: white;
+  width: 100px;
+  height: 100px;
+  background-color: #7fff00;
+  /* position: static;  Defaultna vrednost kod position static */
+  /* Relative ostavlja rezervisan prostor na kom se nalazio (tu se nece automatski naci sledeci element). */
+  /* Dobijamo mogucnost pomeranja elementa (sa svih strana) u odnosu na trenutno postavljeni element. */
   position: relative;
-  left: 10%;
-  top: 20%;
+  top: 0px;
+  left: 50%;
+  /* bottom: 30px; */
+  /* right: 160px; */
 }
+
 .box2 {
-  height: 140px;
-  width: 140px;
-  background-color: blue;
-  position: relative;
-  left: 20%;
-  z-index: 20;
+  width: 100px;
+  height: 100px;
+  background-color: #ae83ff;
+  /* Absolute ne cuva prostor na kom se nalazio (tu ce se automatski naci sledeci element ispod onog na kom je position absolute). */
+  /* Dobijamo mogucnost pomeranja elementa (sa svih strana) u odnosu na parent element. */
+  /* Parent element mora imati position != od static kako bi pomeranje bilo relativno u odnosu na njega, a ne na celu stranicu. */
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
+
 .box3 {
-  height: 140px;
-  width: 140px;
-  background-color: red;
+  width: 100px;
+  height: 100px;
+  background-color: #ff2323;
+  /* Fixed ne cuva prostor na kom se nalazio (tu ce se automatski naci sledeci element ispod onog na kom je position fixed). */
+  /* Dobijamo mogucnost pomeranja elementa (sa svih strana) u odnosu na celu stranicu. */
+  position: fixed;
+  top: 50px;
+  left: 150px;
+}
+
+.box4 {
+  width: 100px;
+  height: 100px;
+  background-color: #f3ffe7;
+  /* Sticky cuva prostor na kom se nalazio (tu se nece automatski naci sledeci element ispod onog na kom je position sticky). */
+  /* Dobijamo mogucnost pomeranja elementa (sa svih strana) u odnosu na trenutno postavljeni element. */
+  position: sticky;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+}
+
+.box5 {
+  width: 100px;
+  height: 100px;
+  background-color: #e1ff00;
   position: relative;
-  left: 30%;
-  bottom: 20%;
+  z-index: 20;
 }
