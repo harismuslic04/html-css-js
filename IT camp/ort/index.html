@@ -1,119 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="prvisajt.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOLICANIN</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body>
-    <div class="parent">
-      <div class="crni">
-        <div class="prijava">
-          <p><i>Prijava|Forum</i></p>
-        </div>
-        <div class="sivi">
-          <div class="lisica">
-            <div class="lisica">
-              <img
-                src="slike/logo.png"
-                alt="neka-slika"
-                width="50px"
-                height="50px"
-              />
-            </div>
+    <div class="preheader"><p>Ovde ide opis reklame.</p></div>
+    <div class="hero">
+      <div class="header">
+        <p>Prijava|Forum</p>
+        <div class="nav">
+          <div class="logo"><img src="./logo.png" alt="" srcset="" /></div>
+          <div class="menu">
+            <ul>
+              <li><a href="#">Moji ispiti |</a></li>
+              <li><a href="#">Dodaj novi ispit |</a></li>
+              <li><a href="#">To do</a></li>
+            </ul>
           </div>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="./image.jpg" alt="" />
+      </div>
+      <div class="ispit">
+        <hr id="first" />
+        <h2>Novi ispit</h2>
+        <hr id="second" />
+      </div>
+      <div class="div">
+        <p>Popuni formu respektivno</p>
+        <hr />
+        <br />
+        <label for="naziv" id="label1">Naziv:</label>
+        <input type="text" name="username" id="naziv" required />
+        <hr />
+        <br />
+        <label for="birthdate" id="label1">Datum:</label>
+        <input type="date" name="birthdate" id="birthdate" />
+        <hr />
+        <br />
+        <label for="time" id="label1">Vreme:</label>
+        <input type="time" name="time" id="time" /><br />
+        <hr />
+        <br />
 
-          <div class="moji-ispiti">
-            <h2>Moji ispiti | Dodaj novi ispit | To do</h2>
-          </div>
-        </div>
-        <div class="prijava"></div>
-      </div>
-      <div class="child2">
-        <div class="velika-slika">
-          <img
-            src="slike/image.jpg"
-            alt="neka-slika"
-            width="100%"
-            height="400px"
-          />
-        </div>
-      </div>
-      <div class="neki-tekst">
-        <h1>Nov ispit</h1>
-      </div>
-      <div class="form">
-        <form>
-          <div class="tekst-forma">
-            <p>Popuniti formu radi dodavnja novog ispita</p>
-            <hr />
-          </div>
-          <div class="naziv">
-            <label for="naziv">Naziv:</label>
-
-            <input type="text" name="naziv" id="naziv" required />
-          </div>
-          <hr />
-          <div class="datum">
-            <label>Datum:</label>
-            <input
-              type="date"
-              name="datum"
-              id="datum"
-              min="12.08.2002"
-              required
-            />
-          </div>
-          <hr />
-          <div class="vreme">
-            <label for="vreme">Vreme:</label>
-            <input type="time" name="vreme" id="vreme" required />
-          </div>
-          <hr />
-
-          <div id="usmeno">
-            <p>Usmeno:</p>
-            <div class="usmeno">
-              <label for="da">DA</label>
-              <input type="radio" name="usmeno" id="da" />
-              <label for="ne">NE</label>
-              <input type="radio" name="usmeno" id="ne" />
-            </div>
-          </div>
-          <hr />
-          <div class="profesor">
-            <label for="profesor">Profesor:</label>
-            <select name="profesor" id="profesor">
-              <option value="prof.dr.babo.Edin Dolicanin">
-                prof.dr.babo.Edin Dolicanin
-              </option>
-              <option value="prof.Edis Mekic">prof.Edis Mekic</option>
-              <option value="prof.Emir Zogicr">prof.Emir Zogic</option>
-            </select>
-          </div>
-          <div class="dugme">
-            <button class="btn btn-success" type="submit">Dodaj</button>
-          </div>
-        </form>
-      </div>
-      <div id="dno">
-        <div class="dno">
-          <div class="nordeus-prvi">
-            <img src="slike/nordeus.png" alt="neka-slika" />
-          </div>
-          <div class="nvidia-drugi">
-            <img src="slike/nvidia.png" alt="neka-slika" />
-          </div>
-          <div class="nordeus-treci">
-            <img src="slike/nordeus.png" alt="neka-slika" />
-          </div>
-          <div class="nvidia-cetvrti">
-            <img src="slike/nvidia.png" alt="neka-slika" />
-          </div>
-        </div>
+        <label for="gender" id="label1">Usmeno:</label>
+        <label for="DA" id="label1">DA</label>
+        <input type="radio" name="gender" id="DA" value="DA" />
+        <label for="NE" id="label1">NE</label>
+        <input type="radio" name="gender" id="NE" value="NE" />
+        <br />
+        <hr />
+        <br />
+        <label for="prof" id="label1">Profesor: </label>
+        <select name="prof" id="prof">
+          <option value="edin" selected>edin</option>
+          <option value="mekic">mekic</option>
+          <option value="lejlija">lejlija</option>
+          <option value="safko">safko</option>
+        </select>
+        <hr />
+        <br />
+        <button type="button">Dodaj</button>
       </div>
     </div>
   </body>
