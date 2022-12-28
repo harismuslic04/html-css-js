@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+#active {
+  background-color: purple;
+  padding: 10px;
+  margin: 0;
+}
+.linked {
+  margin: 0;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+.forma {
+  width: 22rem;
+  border-radius: 10px;
+  border: 1px solid rgb(194, 192, 192);
+  padding: 10px;
+}
+.linked:hover {
+  background-color: grey;
+  color: white;
+}

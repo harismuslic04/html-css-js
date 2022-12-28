@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+#active2 {
+  background-color: purple;
+  padding: 10px;
+  margin: 0;
+}
+.linked {
+  margin: 0;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+.linked:hover {
+  background-color: grey;
+  color: white;
+}
+.card {
+  margin: auto;
+  margin-top: 3rem;
+}
+.table {
+  margin: auto;
+  width: 50%;
+  margin-top: 2rem;
+}
+.input {
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+}
+#button {
+  width: 50%;
+  margin: auto;
+  margin-left: 12rem;
+}

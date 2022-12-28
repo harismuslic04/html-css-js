@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <nav class="navbar d-flex flex-row p-0 bg-dark">
+      <div class="d-flex justify-content-between">
+        <a id="active" class="navbar-brand linked" href="index.html">Login</a>
+        <a id="active2" class="navbar-brand linked" href="#">Info</a>
+      </div>
+      <div class="input-group m-1 w-25">
+        <input
+          type="text"
+          class="form-control"
+          aria-describedby="basic-addon2"
+          placeholder="pretraga..."
+        />
+        <div class="input-group-append">
+          <button class="btn rounded btn-white ml-2" type="button">
+            Pretrazi
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="card" style="width: 18rem">
+      <img
+        class="card-img-top"
+        src="/IT camp/softver.jpg"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Haris Muslic</h5>
+        <p class="card-text">
+          Cao ljudi,ja sam Haris i studiram softversko inzinjerstvo
+        </p>
+        <a href="#" class="btn btn-primary">Moji projekti</a>
+      </div>
+    </div>
+    <table class="table table-success table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Predmet</th>
+          <th scope="col">Ocena</th>
+          <th scope="col">Prisutnost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Osnovi racunarstva</th>
+          <td>10</td>
+          <td>98%</td>
+        </tr>
+        <tr>
+          <th scope="row">Osnovi programiranja</th>
+          <td>9</td>
+          <td>87%</td>
+        </tr>
+        <tr>
+          <th scope="row">Osnovi elektrotehnike</th>
+          <td>9</td>
+          <td>70%</td>
+        </tr>
+        <tr>
+          <th scope="row">Linearna algebra</th>
+          <td>7</td>
+          <td>60%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="input">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend"></div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Ime i prezime"
+          aria-label=""
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend"></div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="password"
+          aria-label=""
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <p>Pol:</p>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios"
+          id="exampleRadios1"
+          value="option1"
+          checked
+        />
+        <label class="form-check-label" for="exampleRadios1"> Muski </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="exampleRadios"
+          id="exampleRadios2"
+          value="option2"
+        />
+        <label class="form-check-label" for="exampleRadios2">Zenski </label>
+      </div>
+      <button id="button" type="button" class="btn btn-primary">
+        Posalji poruku
+      </button>
+    </div>
+  </body>
+</html>
