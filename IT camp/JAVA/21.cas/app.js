@@ -1,45 +1,96 @@
-// 1.	Za uneti string A treba kreirati novi string B koji se sastoji od prve i poslednje reči (odvojenih razmakom) unetog stringa. Npr. za A='Svuda pođi, kući dođi', dobija se B='Svuda dođi'. Podrazumeva se da uneti string nema vodeće ili prateće razmake.
+// 1.  Uneti string se šifruje tako što se zamenjuje redosled znacima u stringu. Prvi i drugi zamene mesta, zatim 3. i 4. zamene mesta itd. Npr. za string 'Pera ima devojku', treba dobiti 'ePari amd vejouk'. Ako string ima neparan broj znakova, poslednji znak se ne dira.
 
-const prvaIPoslednja = function (recenica) {
-  const pozicijaPrvogRazmaka = recenica.indexOf(" ");
-  const prvaRec = recenica.slice(0, pozicijaPrvogRazmaka);
-  const pozicijaPoslednjegRazmaka = recenica.lastIndexOf(" ");
-  const poslednjaRec = recenica.slice(pozicijaPoslednjegRazmaka + 1);
-  const recenica2 = prvaRec.concat(" ", poslednjaRec);
-  return recenica2;
-};
+// const rec = "abcd";
+// let novaRec = "";
+// for (let i = 0; i < rec.length; i++) {
+//   if (i === 0) {
+//     novaRec += rec[i + 1];
+//   } else if (i === 1) {
+//     novaRec += rec[i - 1];
+//   } else if (i === 2) {
+//     novaRec += rec[i + 1];
+//   } else if (i === 3) {
+//     novaRec += rec[i - 1];
+//   }
+// }
+// console.log(novaRec);
 
-console.log(prvaIPoslednja("Hocemo prvu i poslednju rec."));
-
-// 2.	Za uneti string A, treba izdvojiti podstring B, koji počinje od unete pozicije N i ima M znakova. Npr. za string 'Pera ima devojku', N=6 i M=7, dobija se B='ima dev'.
-
-const podString = (string, pocetak, duzina) => {
-  const noviString = string.substr(pocetak, duzina);
-  return noviString;
-};
-
-console.log(podString("Recenica kojoj cemo uzeti nekoliko karaktera", 5, 9));
-
-// 3.	Unosi se string A i znak Z. Kreirati novi string B koji se dobija tako što se iz unetog stringa izbacuje svaka pojava znaka Z. Npr. za unet string "Madagaskar" i znak "a", dobijamo rezultat "Mdgskr"
-
-const bezZnaka = (string, znak) => {
-  //   const noviString = string.replace(/znak/g , "");
-  let noviString = "";
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] !== znak) {
-      noviString += string[i];
+function menjanje(recenica) {
+  let novaRecenica = "";
+  for (let i = 0; i < recenica.length; i++) {
+    if (recenica.length % 2 !== 0 && i === recenica.length - 1) {
+      novaRecenica += recenica[i];
+    } else if (i % 2 === 0) {
+      novaRecenica += recenica[i + 1];
+    } else if (i % 2 !== 0) {
+      novaRecenica += recenica[i - 1];
     }
   }
-  return noviString;
+  return novaRecenica;
+}
+
+console.log(menjanje("Pera ima devojku"));
+console.log(menjanje("Pera ima devojku."));
+
+// 2.  Unose se dva stringa A i B. Kreirati novi string kao kombinaciju stringova A i B, tako što se kombinuju prvi sa prvim, drugi sa drugim, treći sa trećim znakom itd. Ako je jedan string duži od drugog, na kraju samo dodati znakove viška. Npr. za stringove "PERA" i "sladoled" dobija se string "PsElRaAdoled".
+
+const drugi = (recenica1, recenica2) => {
+  const duzina1 = recenica1.length;
+  const duzina2 = recenica2.length;
+  //   let duzina;
+  //   if (duzina1 > duzina2) {
+  //     duzina = duzina1;
+  //   } else {
+  //     duzina = duzina2;
+  //   }
+  const duzina = duzina1 > duzina2 ? duzina1 : duzina2;
+  let recenica3 = "";
+  for (let i = 0; i < duzina; i++) {
+    if (recenica1[i] !== undefined && recenica2[i] !== undefined) {
+      recenica3 += recenica1[i] + recenica2[i];
+    } else if (recenica1[i] === undefined) {
+      recenica3 += recenica2[i];
+    } else if (recenica2[i] === undefined) {
+      recenica3 += recenica1[i];
+    }
+  }
+  return recenica3;
+};
+console.log(drugi("PERA", "sladoled"));
+console.log(drugi("OVO JE SADA DUZI STRING", "sladoled"));
+
+// 6. Write a JavaScript function to hide email addresses to protect from unauthorized user.
+// console.log(protectEmail("robin_singh@example.com"));
+// "robin...@example.com"
+
+const protectEmail = (email) => {
+  let index = 0;
+  for (let i = 0; i < email.length; i++) {
+    if (
+      email[i] === "." ||
+      email[i] === "_" ||
+      email[i] === "1" ||
+      email[i] === "0" ||
+      email[i] === "2" ||
+      email[i] === "3" ||
+      email[i] === "4" ||
+      email[i] === "5" ||
+      email[i] === "6" ||
+      email[i] === "7" ||
+      email[i] === "8" ||
+      email[i] === "9"
+    ) {
+      index = i;
+      break;
+    }
+  }
+  const indexAt = email.indexOf("@");
+  const prviDeo = email.slice(0, index);
+  const drugiDeo = email.slice(indexAt);
+  const noviEmail = prviDeo.concat("...", drugiDeo);
+  return noviEmail;
 };
 
-console.log(bezZnaka("Madagaskar", "a"));
-
-// Domaci zadatak:
-// Izdvojiti N znakova sa desne strane (poslednjih N znakova) unetog stringa. Npr. za string 'Pera ima devojku' i N=5, dobija se 'vojku'.
-
-const task = (recenica, n) => {
-  const poslednjihN = recenica.slice(-n);
-  return poslednjihN;
-};
-console.log(task("haris doso posle dva casa", 5));
+console.log(protectEmail("dzenan_kosuta@hotmail.com"));
+console.log(protectEmail("dzenan.mecinovic@hotmail.com"));
+console.log(protectEmail("dzenan5zecic@hotmail.com"));
