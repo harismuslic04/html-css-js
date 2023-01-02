@@ -138,3 +138,15 @@ for (let i = 0; i < nizz.length; i++) {
 }
 console.log(` ${stringovi} elementa su string, ${numberi} elementa su broj,
 ${booleani} elementa su boolean, ${arrayi} elementa su niz`);
+
+const zadatak = (par3) => {
+  let duzina = par3.length;
+  for (let i = 0; i <= duzina; i++) {
+    if (i % 2 === 0) {
+      par3[i] = "paran broj";
+    }
+  }
+  return par3;
+};
+
+console.log(zadatak([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]));
