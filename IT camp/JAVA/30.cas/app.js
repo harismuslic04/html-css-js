@@ -150,3 +150,15 @@ const zadatak = (par3) => {
 };
 
 console.log(zadatak([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]));
+
+//iz niza izdvojiti parne brojeve
+function parniTask(par1) {
+  const parni = [];
+  for (let broj of par1) {
+    if (broj % 2 === 0 && !isNaN(broj)) {
+      parni.push(broj);
+    }
+  }
+  return parni;
+}
+console.log(parniTask([-66, -67, -93, -22, -35, 2, 4, 5, 7, 9, 88]));
