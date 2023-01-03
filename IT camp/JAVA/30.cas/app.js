@@ -162,3 +162,28 @@ function parniTask(par1) {
   return parni;
 }
 console.log(parniTask([-66, -67, -93, -22, -35, 2, 4, 5, 7, 9, 88]));
+
+//iz niza izdvojiti neparne brojeve
+function neparniTask(par2) {
+  const neparni = [];
+  for (let broj of par2) {
+    if (broj % 2 !== 0 && !isNaN(broj)) {
+      neparni.push(broj);
+    }
+  }
+  return neparni;
+}
+console.log(neparniTask([-66, -67, -93, -22, -35, 2, "dfd", 4, 5, 7, 9, 88]));
+
+//iz niza izdvojiti sve pozitivne brojeve
+function pozitivniTask(par2) {
+  const pozitivni = [];
+  for (let broj of par2) {
+    if (broj > 0 && !isNaN(broj)) {
+      pozitivni.push(broj);
+    }
+  }
+  return pozitivni;
+}
+
+console.log(pozitivniTask([-66, -67, -93, -22, -35, 2, "dfd", 4, 5, 7, 9, 88]));
