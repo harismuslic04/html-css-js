@@ -187,3 +187,10 @@ function pozitivniTask(par2) {
 }
 
 console.log(pozitivniTask([-66, -67, -93, -22, -35, 2, "dfd", 4, 5, 7, 9, 88]));
+
+// 1. Pomocu map() metode napraviti novi niz stringova ciji ce elementi
+niz1 = ["haris", "sumeja", "hasan", "muslic"];
+niz3 = niz1.map((element) => {
+  return `${element[0].toUpperCase()}${element.slice(1, element.length)}`;
+});
+console.log(niz3);
