@@ -138,6 +138,7 @@ for (let i = 0; i < nizz.length; i++) {
 }
 console.log(` ${stringovi} elementa su string, ${numberi} elementa su broj,
 ${booleani} elementa su boolean, ${arrayi} elementa su niz`);
+// moglo je i typeof nizz==="string"
 
 const zadatak = (par3) => {
   let duzina = par3.length;
