@@ -1,38 +1,37 @@
-// Novi zapis for petlje,jihu se odnosi na sve iterirajuce objekte
-// for (let i of nizz){
-// console.log(i)
-//}
+// unshift() metoda dodaje na pocetku niza jedan ili vise elemenata.
+// unshift() prikazuje novu duzinu niza.
 
-// unshift() metoda dodaje na pocetku niza jedan ili vise elemenata
-// unshift() prikazuje novu duzinu niza
 const niz = ["cetvrtak", "petak", "subota"];
+
 niz.unshift("sreda");
 console.log(niz);
 
-// shift() metoda brise prvi element niza i svim ostalim elementima smanjuje index zz 1
-niz.shift();
+console.log(niz.unshift("ponedeljak", "utorak"));
 console.log(niz);
 
-// delete ketword za brisanje odredjenog elementa unutar niza
-// brise se element ali ostaje rupa u nizu (empty item)
+// shift() metoda brise prvi element niza i svim ostalim elementima smanjuje index za 1.
+// shift() metoda vraca izbrisani element. Kao kod pop() metode.
+
+console.log(niz.shift());
+console.log(niz);
+
+// delete keyword za prisanje odredjenog elementa unutar niza:
+// Preko delete keyword mozemo izbrisati bilo koji element iz niza ali na taj nacin ostavljamo rupe u nizu (undefined vrednosti).
 
 console.log(niz.length);
 
-delete niz[2];
+delete niz[4];
 console.log(niz);
 
-// concat() metoda se koristi za spajanje nizova,sa tim sto kkao argument mozemo poslati i string
-//ne mora islkucivo biti niz
+// concat() metoda se koristi za spajanje nizova. concat() metoda pravi novi niz. S tim sto kao argument mozemo poslati i string, ne mora iskljucivo biti niz.
 
-const crveni = ["liverpul", "arsenal"];
-const plavo = ["celsi", "city"];
-const grupa = crveni.concat(plavo, "brighton");
+const muskarci = ["Mitar", "Tarik", "Dzenan"];
+const devojke = ["Miona", "Merisa", "Hatidza"];
+const grupa = muskarci.concat(devojke, "Mehmed", "Omar");
 console.log(grupa);
 
-// iz naseg niza grupa napraviti dva niza muskarci i devojke,s tim sto se Omar ne sme naci nigde
-nizzz = ["Haris", "Aladin", "Alen", "Hatidza", "Merisa"];
-
-function podeliNiz(niz) {
+// Iz naseg niza grupa napraviti dva niza muskarci i devojke, s tim sto se Omar ne sme naci nigde.
+const podeliNiz = (niz) => {
   const muskarci = [];
   const devojke = [];
   for (let osoba of niz) {
@@ -44,29 +43,40 @@ function podeliNiz(niz) {
       muskarci.push(osoba);
     }
   }
-} //????????
+  return `Muskarci su ${muskarci} \n
+  Devojke su ${devojke}`;
+};
 
-//napraviti funkciju koja pravi novi niz,koji ce sadrzati samo elemente koji su se nalazili na neparnim pozicijama unutar originalnog niza
-function neparniTask(par2) {
+console.log(podeliNiz(grupa));
+
+// 1. Napraviti funkciju koja pravi novi niz, koji ce sadrzati samo elemente koji su se nalazili na neparnim mestima unutar originalnog niza.
+// [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+// [1,3,5,7,9,11,13]
+
+const neparnePozicije = (niz) => {
   const neparni = [];
-  for (let broj of par2) {
-    if (broj % 2 !== 0) {
-      neparni.push(broj);
-    }
+  for (let i = 0; i < niz.length; i += 2) {
+    neparni.push(niz[i]);
   }
   return neparni;
-}
-console.log(neparniTask([22, 34, 12, 51, 562, 15, 782, 91]));
+};
+console.log(neparnePozicije([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]));
 
-//domaci isto ovo samo umesto neparnih parni
-function pozitivniTask(par2) {
+// Domaci:
+// 1. Napraviti funkciju koja pravi novi niz, koji ce sadrzati samo elemente koji su se nalazili na parnim mestima unutar originalnog niza.
+// [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+// [2,4,6,8,10,12,14]
+// 2. Iz nekog niza izdvojiti sve parne brojeve.(Napraviti novi niz)
+// 3. Iz nekog niza izdvojiti sve neparne brojeve.(Napraviti novi niz)
+// 4. Iz nekog niza izdvojiti sve pozitivne brojeve.(Napraviti novi niz)
+
+function pozitivni(niz) {
   const pozitivni = [];
-  for (let broj of par2) {
+  for (let broj of niz) {
     if (broj > 0) {
-      pozitivni.push(broj);
+      pozitivni.unshift(broj);
     }
   }
   return pozitivni;
 }
-
-console.log(pozitivniTask([-2, 0, 22, 12, 51, 31, -21, -25, 1, -2]));
+console.log(pozitivni([-5, -7, 0, 3, 6, -6, 4, 10]));
