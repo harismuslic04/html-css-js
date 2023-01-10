@@ -58,3 +58,27 @@ console.log(brojevi);
 // Napraviti funkciju koja vraca najveci element niza,
 // Napraviti funkciju koja vraca najmanji element niza (na 2 nacina).
 // const niz = [-5, 6, 10, 45, 99, -44];
+// I nacin
+
+function maxEl(niz) {
+  niz.sort((a, b) => b - a);
+  return niz[0];
+}
+console.log(maxEl(brojevi));
+
+// II nacin
+
+console.log(Math.max.apply(null, brojevi));
+
+// III nacin
+
+function maxEl2(niz) {
+  let max = Number.NEGATIVE_INFINITY;
+  for (let broj of niz) {
+    if (broj > max) {
+      max = broj;
+    }
+  }
+  return max;
+}
+console.log(maxEl2(brojevi));
