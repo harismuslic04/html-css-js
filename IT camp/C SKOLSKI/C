@@ -1653,3 +1653,133 @@ if(broj%(10*a+c)==0)
 printf("\n%d",broj );}
 return 0;
 }
+{
+int a,b,c,broj,brojac=0;
+float s=0;
+for(a=1;a<10;a++)
+for(b=0;b<10;b++)
+for(c=0;c<10;c++){
+    broj=100*a+10*b+c;
+if(a+b+c==5){
+s+=broj;
+brojac++;
+}}
+printf("\n%f",s );
+printf("\n%d",brojac );
+return 0;
+}
+{
+int i,n;
+printf("unesi broj");
+scanf("%d",&n);
+for(i=1;i<=n;i++){
+    if(n%i==0)
+    printf("\n%d",i);
+}
+return 0;
+}
+{
+int i,n;
+float s=0;
+printf("unesi broj");
+scanf("%d",&n);
+for(i=1;i<n;i++){
+    if(n%i==0)
+    s+=i;}
+    if(n==s)
+        printf("broj je savrsen");
+    else 
+        printf("nije savrsen");
+    
+
+return 0;
+}
+{
+int n,kec=0,i,o;
+float s=0,ar;
+printf("unesi broj ucenika");
+scanf("%d",&n);
+for(i=1;i<=n;i++){
+    printf("unesi ocenu %d ucenika",i);
+    scanf("%d",&o);
+s+=o;
+if(o==1){
+kec++;}
+}
+ar=s/n;
+printf("aritmeticka sredina je %f,ucenika sa kecevima ima %d",ar,kec);
+return 0;
+}
+{
+ int sat, min, sec, n;
+ printf("n= ");
+ scanf("%d",&n);
+ for(sat=0; sat<=23; sat++)
+ for(min=0; min<=59; min++)
+ for(sec=0; sec<=59; sec++)
+ {
+ if(n==(sat/10+sat%10+min/10+min%10+sec/10+sec%10))
+ printf("\n%d sat %d min %d sec", sat, min, sec);
+ }
+ return 0; 
+}
+{
+ float xmin, xmax, dx, x, y;
+ printf("xmin= ");
+ scanf("%f", &xmin);
+ printf("xmax= ");
+ scanf("%f", &xmax);
+ printf("dx= ");
+ scanf("%f", &dx);
+ printf("\n x y\n ===================\n");
+ for(x=xmin; x<=xmax; x+=dx)
+ {
+ y=(2*x+1)/(x*x-1);
+ printf ("\n%f", y);
+ }
+ return 0; 
+}
+{
+double xmin, xmax, dx, x, y=1, p=1;
+ int i, n;
+ printf("n= ");
+ scanf("%d", &n);
+ printf("xmin= ");
+ scanf("%lf", &xmin);
+ printf("xmax= ");
+ scanf("%lf", &xmax);
+ printf("dx= ");
+ scanf("%lf", &dx);
+ printf("\n x y\n");
+ printf("===================\n");
+ for(x=xmin;x<=xmax;x+=dx)
+ {
+ for(i=1; i<=n; i++)
+ {
+ p*=x;
+ y*=(1+p);
+ }
+ printf("%10.6f %11.6f\n",x,y);
+ p=1;
+ y=1;
+ }
+ return 0; 
+}
+#include <stdio.h>
+#include <math.h>
+#define PI 3.141592 
+int main()
+{
+ double dx, UgaoRad, UgaoSte;
+ printf("Unesite korak u stepenima: ");
+ scanf("%lf",&dx);
+ printf("\n x sin(x)");
+ printf("\n=======================\n");
+ for(UgaoSte=0; UgaoSte<=90; UgaoSte+=dx)
+ {
+ UgaoRad = (PI*UgaoSte)/180.0;
+ printf("%f \t%f\n",UgaoSte, sin(UgaoRad));
+ }
+ return 0;  
+}
+
