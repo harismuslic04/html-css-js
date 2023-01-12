@@ -2057,3 +2057,35 @@ while(k!=0){
 }printf("\n %d brojeva ima prvu cifru %d ", br, m);
 return 0;
 }
+// septembar 2021 ispit(ispisati drugi najveci broj od n brojeva)
+{
+  int n, num, prvi = 0, drugi = 0;  
+  
+    printf("Unesi broj brojeva\n");  
+    scanf("%d", &n);  
+  
+    printf("Unesi %d pozitivnih projeva\n", n);  
+   
+  
+    while(n > 0)  
+    {  
+        scanf("%d", &num);  
+  
+        if(num > prvi)  
+        {  
+            drugi = prvi;  
+            prvi = num;  
+        }  
+        if(num > drugi && num < prvi)  
+        {  
+            drugi = num;  
+        }  
+  
+        n--;  
+    }  
+  
+    printf("prvi najveci je %d\n",prvi);  
+    printf("drugi najveci je %d\n", drugi);  
+  
+    return 0; 
+}
