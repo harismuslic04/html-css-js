@@ -2089,3 +2089,108 @@ return 0;
   
     return 0; 
 }
+// ispit jul 2021
+{
+int sn=0,sp=0,cifre,n,i,k=0;
+printf("unesi broj");
+scanf("%d",&n);
+while(n>0){
+    cifre=n%10;
+    n/=10;
+    k++;
+    if(k%2==0){
+        sp+=cifre;
+    }
+    else if(k%2!=0){sn+=cifre;}
+}
+if(sp!=sn){
+    printf("broj nije savrsen");
+}
+else if(sp=sn){
+    printf("broj je savrsen");
+}
+
+return 0;
+}
+// ispit jul 2020 
+{
+long sn=0,sp=0,cifre,n,i,k=0,p,proizvod,zbir,zadnjacifra,kraj;
+printf("unesi broj");
+scanf("%ld",&n);
+p=n;
+while(n>0){
+    cifre=n%10;
+    n/=10;
+    k++;
+    if(k%2==0){
+        sp+=cifre;
+    }
+    else if(k%2!=0){sn+=cifre;}
+}
+proizvod=3*sn;
+zbir=proizvod+sp;
+for(i=zbir;i<=zbir+10;i++){
+    if(i%10==0){
+        kraj=i;
+    }
+}
+zadnjacifra=kraj-zbir;
+printf("ceo broj je %ld%ld",p,zadnjacifra);
+return 0;
+}
+// april 2020 ispit
+{
+    int m,n,i;
+    float suma=0,koren;
+   while(m<1 || n<1)
+ {
+ printf("\n Unesite m i n: ");
+ scanf("%d%d",&m,&n);
+ }
+ for(i=m;i<=n;i++){
+     if(i%2!=0){
+         koren=sqrt(i);
+         suma+=koren;
+     }
+ }
+ printf("suma je %f",suma);
+ 
+ return 0;
+}
+// I kolokvijum 2019
+{
+int a,b,i,a1,b1,cifraa,cifrab,k=-1,n=-1,suma1=0,suma2=0;
+float suma=0;
+printf("unesi a:");
+scanf("%d",&a);
+printf("unesi b:");
+scanf("%d",&b);
+while(a>0){
+    cifraa=a%10;
+    a/=10;
+    k++;
+    suma1+=cifraa*pow(2,k);
+}
+while(b>0){
+    cifrab=b%10;
+    b/=10;
+    n++;
+    suma2+=cifrab*pow(2,n);
+}
+suma=suma1+suma2;
+printf("zbir %d i %d je %f",a,b,suma);
+return 0;
+}
+//ispit jun 2019
+{
+int i,n;
+printf("unesi broj:");
+scanf("%d",&n);
+for(i=2;n/2;i++){
+    while(n%i==0){
+        printf("\n%d",i);
+        n/=i;
+    }
+}
+return 0;
+}
