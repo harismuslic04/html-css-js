@@ -2140,12 +2140,17 @@ return 0;
 }
 // april 2020 ispit
 {
-    int m,n,i;
+    int m,n,i,pomocna;
     float suma=0,koren;
    while(m<1 || n<1)
  {
  printf("\n Unesite m i n: ");
  scanf("%d%d",&m,&n);
+ }
+ if(n<m){
+     pomocna=n;
+     n=m;
+     m=pomocna;
  }
  for(i=m;i<=n;i++){
      if(i%2!=0){
@@ -2215,5 +2220,110 @@ else if(a>0 && b<0){
 }
 }
 printf("U prvom kvadrantu ima %d tacaka,u drugom %d,u trecem %d,u cetvrtom %d",k1,k2,k3,k4);
+return 0;
+}
+// februar 2020 ispit
+{
+int n,m,i,k=0,p=0,pretposlednja,suma=0,z,cifre,l=0;
+printf("unesi M :\n");
+scanf("%d",&m);
+printf("unesi N :\n");
+scanf("%d",&n);
+while(1){
+    printf("\nunesi broj");
+    scanf("%d",&i);
+    pretposlednja=(i/10)%10;
+    while(i>0){
+        cifre=i%10;
+        suma+=cifre;
+        i/=10;
+        k++;
+    }
+   
+    if(k==n && suma%pretposlednja==0){
+        printf("uneti broj odgovara kriterijumu");
+        p++;
+    }
+    else{
+        printf("broj ne odgovara kriterijumu");
+        l++;
+    }
+     k=0;
+    if(p==m){
+        printf("\nbrojeva koji ne odgovaraju kriterijumu ima %d",l);
+        break;
+    }
+}
+return 0;
+}
+// septembar 2018 ispit
+{
+ int i,v,m=0,n,k,b=0,z,f=0;
+ printf("unesi n:");
+ scanf("%d",&n);
+ while(n>100){
+     printf("unesi n:");
+     scanf("%d,",&n);
+ }
+ printf("unesi v:");
+ scanf("%d",&v);
+
+ for(i=1;i<=n;i++){
+     printf("\nunesi broj:");
+     scanf("%d",&k);
+     b++;
+     if(k==v){
+         f++;
+         z=b;
+     }
+     if(k<v){
+         m++;
+     }
+ }
+ if(f>0){
+     printf("broj se nalazi u nizu na %d. mestu,ima %d brojeva manjih od njega",z,m);
+ }
+ else if(f==0){
+     printf("broj se ne nalazi u nizu");
+ }
+ return 0;
+ }
+ // jul ispit 2019
+ {
+int sat,minut,sekund,i,n;
+printf("unesi broj:\n");
+scanf("%d",&n);
+for(sat=0;sat<=24;sat++)
+for(minut=0;minut<=60;minut++)
+for(sekund=0;sekund<=60;sekund++){
+    if(sat/10+sat%10+minut/10+minut%10+sekund/10+sekund%10==n){
+        printf("%d sati %d minuta %d sekundi\n",sat,minut,sekund);
+    }
+}
+return 0;
+}
+{
+// januar 2020 ispit
+int suma,i,n,brojac=0,suma2=0,broj;
+printf("unesi sumu");
+scanf("%d",&suma);
+while(1){
+    printf("unesi broj:");
+    scanf("%d",&n);
+    broj=n;
+    for(i=1;i<=n;i++){
+        if(n%i==0)
+            brojac++;
+        
+    }
+    if(brojac==2){
+        suma2+=broj;
+    }
+    if(suma2>suma){
+        printf("suma je %d",suma2);
+        break;
+    }
+    brojac=0;
+}
 return 0;
 }
