@@ -31,3 +31,28 @@ console.log(numbers2);
 
 const DATA1 = [2, 26, 38, 75, 11, 29];
 const DATA2 = ["a", "b", "c", "d", "e"];
+
+// 1.
+const brojevidomaci = [2, 5, -2, 30, 11, -8];
+const novi = [];
+for (let broj of brojevidomaci) {
+  if (broj > 17) novi.push(broj);
+}
+console.log(novi);
+
+// 2.
+const DATA1 = [2, 26, 38, 75, 11, 29];
+const DATA2 = ["a", "b", "c", "d", "e"];
+const novi2 = [];
+const novi3 = [];
+function funkcija(niz1, niz2) {
+  novi2 = niz1.concat(niz2);
+  for (let broj of DATA1) {
+    if (broj % 2 == 0) novi3.push(broj);
+  }
+  novi3.splice(0, 0, 20);
+  novi3.splice(0, 0, 10);
+  console.log(novi2);
+  console.log(novi3);
+}
+console.log(funkcija(DATA1, DATA2));
