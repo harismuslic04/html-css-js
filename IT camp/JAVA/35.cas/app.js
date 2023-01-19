@@ -41,18 +41,34 @@ for (let broj of brojevidomaci) {
 console.log(novi);
 
 // 2.
-const DATA1 = [2, 26, 38, 75, 11, 29];
-const DATA2 = ["a", "b", "c", "d", "e"];
-const novi2 = [];
-const novi3 = [];
-function funkcija(niz1, niz2) {
-  novi2 = niz1.concat(niz2);
-  for (let broj of DATA1) {
-    if (broj % 2 == 0) novi3.push(broj);
+// const DATA1 = [2, 26, 38, 75, 11, 29];
+// const DATA2 = ["a", "b", "c", "d", "e"];
+// const novi2 = [];
+// const novi3 = [];
+// function funkcija(niz1, niz2) {
+//   novi2 = niz1.concat(niz2);
+//   for (let broj of DATA1) {
+//     if (broj % 2 == 0) novi3.push(broj);
+//   }
+//   novi3.splice(0, 0, 20);
+//   novi3.splice(0, 0, 10);
+//   console.log(novi2);
+//   console.log(novi3);
+// }
+// console.log(funkcija(DATA1, DATA2));
+
+// 2. nacin
+const DATA3 = [2, 26, 38, 75, 11, 29];
+const DATA4 = ["a", "b", "c", "d", "e"];
+const task = (arr1, arr2) => {
+  const pomocni1 = arr1.concat(arr2);
+  const pomocni2 = [];
+  for (let br of pomocni1) {
+    if (br % 2 === 0) {
+      pomocni2.push(br);
+    }
   }
-  novi3.splice(0, 0, 20);
-  novi3.splice(0, 0, 10);
-  console.log(novi2);
-  console.log(novi3);
-}
-console.log(funkcija(DATA1, DATA2));
+  pomocni2.unshift(10, 20);
+  return [pomocni1, pomocni2];
+};
+console.log(task(DATA3, DATA4));
