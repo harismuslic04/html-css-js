@@ -2362,3 +2362,54 @@ int niz[MAX], i,n;
  printf(" %d", niz[i]);
  return 0; 
 }
+//ispit dunp niz
+int main()
+{
+int n,i,p;
+float suma1=0,suma2=0;
+printf("unesi n:");
+scanf("%d",&n);
+printf("unesi p:");
+scanf("%d",&p);
+for(i=0;i<n;i++){
+    scanf("%d",&niz[i]);
+}
+for(i=0;i<p;i++){
+    suma1+=niz[i];
+}
+for(i=p+1;i<n;i++){
+    suma2+=niz[i];
+}
+if(suma1==suma2){
+    printf("niz je savrsen");
+}
+else {
+    printf("niz nije savrsen");
+}
+return 0;
+}
+double SkalPro(double a[], double b[], int n)
+{
+ double zbir=0;
+ int i;
+ for(i=0;i<n;i++)
+ zbir+=a[i]*b[i];
+ return zbir;
+}
+main()
+{
+ double nizA[MAX],nizB[MAX];
+ int i, n;
+ printf(" Broj elemenata niza: ");
+ scanf("%d",&n);
+ printf(" Elementi niza A: ");
+ for(i=0; i<n; i++)
+ scanf("%lf",&nizA[i]);
+ printf(" Elementi niza B: ");
+ for(i=0; i<n; i++)
+ scanf("%lf",&nizB[i]);
+ printf("\n A*B= %.2f", SkalPro(nizA,nizB,n));
+ getche();
+ return 0;
+}
+
