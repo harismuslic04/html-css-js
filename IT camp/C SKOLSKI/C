@@ -2477,3 +2477,39 @@ main()
  }
  getche();
  ret
+  float nizA[MAX], nizB[MAX], nizC[MAX];
+ int i;
+ printf (" Elementi niza A: ");
+ for(i=0; i<MAX; i++)
+ scanf ("%f", &nizA[i]);
+ printf (" Elementi niza B: ");
+ for(i=0; i<MAX; i++)
+ scanf ("%f", &nizB[i]);
+ printf ("\n Elementi niza C: ");
+ for(i=0; i<MAX; i++)
+ {
+ nizC[i]=pow(nizA[i],3)/3+2*nizA[i]*nizB[i];
+ printf ("%.2f ", nizC[i]);
+ }
+ getche();
+ ruturn 0;
+ #include <stdio.h>
+#define MAX 5
+main()
+{
+ int nizA[MAX], nizB[MAX], nizC[MAX], i;
+ printf (" Elementi niza A: ");
+ for(i=0; i<MAX; i++)
+ scanf ("%d", &nizA[i]);
+ printf (" Elementi niza B: ");
+ for(i=0; i<MAX; i++)
+ scanf ("%d", &nizB[i]);
+ printf (" Elementi niza C: ");
+ for(i=0; i<MAX; i++)
+ {
+ nizC[i]=nizA[i]+nizB[MAX-1-i];
+ printf ("%d ", nizC[i]);
+ }
+ getche();
+ return 0;
+}
