@@ -2701,3 +2701,70 @@ main()
  getche();
  return 0;
 }
+main()
+{
+ int i, j, n, nadjeniIsti, a[MAX];
+ printf(" Broj elemenata niza: ");
+ scanf("%d", &n);
+ printf(" Elementi niza: ");
+ for(i=0; i<n; i++)
+ scanf ("%d", &a[i]);
+ printf("\n Novi niz: ");
+ for(i=0; i<n-1; i++)
+ {
+ nadjeniIsti=0;
+ for(j=i+1; j<n; j++)
+ if(a[i] == a[j])
+ {
+ nadjeniIsti=1;
+ break;
+ }
+ if(!nadjeniIsti)
+ printf ("%d ",a[i]);
+ }
+ printf ("%d ",a[n-1]);
+ getche();
+ return 0;
+}
+//ispit april 2020 zadatak sa nizom
+#include <stdio.h>
+
+#define MAX 100
+int funkcija(int niz[],int n,int budzet){
+        float suma=0;
+        int brojac=0;
+        int i,j,k;
+        int pom;
+        
+        
+        for(i=0; i<n-1; i++)
+ for(j=i+1; j<n; j++)
+ if(niz[i] > niz[j])
+ {
+ pom=niz[i];
+ niz[i]=niz[j];
+ niz[j]=pom;
+ } 
+ for(i=0;i<n;i++){
+     suma+=niz[i];
+     if(suma>budzet){
+  break;  }
+     brojac++;
+     
+ 
+ }
+        return brojac;
+    }
+    int main(){
+        int n,i,niz[MAX],budzet;
+        printf("unesi broj cena:");
+        scanf("%d",&n);
+       printf("Unesi niz");
+       for(i=0;i<n;i++){
+           scanf("%d",&niz[i]);
+       }
+       printf("unesi budzet");
+       scanf("%d",&budzet);
+       printf("najveci broj automobila za taj budzet je %d",funkcija(niz,n,budzet));
+       return 0;
+    }
