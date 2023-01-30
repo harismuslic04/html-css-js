@@ -2768,3 +2768,146 @@ int funkcija(int niz[],int n,int budzet){
        printf("najveci broj automobila za taj budzet je %d",funkcija(niz,n,budzet));
        return 0;
     }
+    //ispit 2019 jul (presek dva niza)
+    #include <stdio.h>
+#define MAX 100
+int main()
+{
+   int j,i,nadjen=0,niz1[MAX],niz2[MAX],p,n;
+   printf("unesi prvi niz");
+   scanf("%d",&n);
+   for(i=0;i<n;i++){
+       scanf("%d",&niz1[i]);
+   }
+    printf("unesi drugi niz");
+   scanf("%d",&p);
+   for(i=0;i<p;i++){
+       scanf("%d",&niz2[i]);
+   }
+   for(i=0;i<n;i++){
+       nadjen=0;
+       for(j=0;j<n;j++)
+       if(niz1[i]==niz2[j]){
+           nadjen=1;
+           break;
+       }
+       if(nadjen==1){
+           printf("\t%d",niz1[i]);
+       }
+   }
+   return 0;
+}
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, m, n, mat[MAX][MAX];
+ printf(" Vrsta m= ");
+ scanf("%d", &m);
+ printf(" Kolona n= ");
+ scanf("%d", &n);
+ /*Citanje matrice sa tastature*/
+ for(i=0; i<m; i++)
+ for(j=0; j<n; j++)
+ {
+ printf(" element[%d][%d] = ",i,j);
+ scanf("%d", &mat[i][j]);
+ }
+ /*Prikaz matrice*/
+ printf("\n Uneta matrica:\n");
+ for(i=0; i<m; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d", mat[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+}
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, n, m, mat1[MAX][MAX], mat2[MAX][MAX];
+ printf(" m= ");
+ scanf("%d", &m);
+ printf(" n= ");
+ scanf("%d", &n);
+ printf("\n Elementi prve matrice: \n");
+ for(i=0; i<m; i++)
+ for(j=0; j<n; j++)
+ scanf("%d", &mat1[i][j]);
+ printf("\n Elementi druge matrice: \n");
+ for(i=0; i<m; i++)
+ for(j=0; j<n; j++)
+ scanf("%d", &mat2[i][j]);
+ printf("\n Zbir dve matrice:\n");
+ for(i=0; i<m; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d", mat1[i][j]+mat2[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+}
+#include <stdio.h>
+#define MAX 100
+int main()
+{
+     int i, j, n, sgd=0, ssd=0, mat[MAX][MAX];
+ printf(" n= ");
+ scanf("%d", &n); 
+ printf(" Elementi:\n");
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ {
+ printf(" element[%d][%d] = ", i, j);
+ scanf("%d", &mat[i][j]);
+ }
+ printf("\n Uneta matrica:\n");
+ for(i=0; i<n; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d",mat[i][j]);
+ printf("\n");
+ }
+ printf("\n Elementi glavne dijagonale: ");
+ for(i=0; i<n; i++)
+ {
+ printf("%d ",mat[i][i]);
+ sgd+=mat[i][i];
+ }
+ printf("\n Suma glavne dijagonale = %d", sgd);
+ printf("\n Elementi sporedne dijagonale: ");
+ for(i=0; i<n; i++)
+ {
+ printf("%d ",mat[i][n-i-1]);
+ ssd+=mat[i][n-i-1];
+ }
+ printf("\n Suma sporedne dijagonale = %d", ssd);
+
+ return 0;
+}
+
+ int i, j, m, n, a[MAX][MAX];
+ printf(" m= ");
+ scanf("%d", &m);
+ printf(" n= ");
+ scanf("%d", &n);
+ printf(" Matrica:\n");
+ for(i=0; i<m; i++)
+ for(j=0; j<n; j++)
+ scanf("%d", &a[i][j]); 
+ printf("\n Elementi:\n");
+ for(j=0;j<n;j++)
+ {
+ if(j%2==0)
+ for(i=0; i<m; i++)
+ printf(" %d",a[i][j]);
+ else
+ for(i=m-1; i>=0; i--)
+ printf(" %d",a[i][j]);
+ }
+ 
+ return 0; 
