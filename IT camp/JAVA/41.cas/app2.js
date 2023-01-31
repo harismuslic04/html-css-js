@@ -90,3 +90,28 @@ myCar.smanjenjeBrzine = function (smanjenje) {
 console.log(myCar.smanjenjeBrzine(40));
 myCar.smanjenjeBrzine(25);
 console.log(myCar);
+
+// Napraviti objekat sa sledecim svojstvima:
+// 1. firstName,
+// 2. lastName,
+// 3. language,
+// 4. setLanguage - metoda za setovanje jezeika
+// 5. setNickName - metoda sastavljen od prva dva slova imena i prva dva slova prezimena
+
+const objekat = {};
+
+firstname = "haris";
+lastname = "muslic";
+lang = "bosanski";
+pricam = "srpski";
+jezik = function () {
+  return (lang = pricam);
+};
+imeprezime = function () {
+  return (
+    this.firstname[0] + this.firstname[1] + this.lastname[0] + this.lastname[1]
+  );
+};
+
+console.log(imeprezime());
+console.log(jezik());
