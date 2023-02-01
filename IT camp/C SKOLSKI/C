@@ -3140,3 +3140,197 @@ main()
  return 0;
 }
  
+ // STRUKTURE //
+ #include <stdio.h>
+struct datum
+{
+ int dan;
+ int mesec;
+ int godina;
+};
+struct licnost
+{
+ char ime[30];
+ struct datum datRodj;
+};
+main()
+{
+ struct licnost osoba;
+ struct datum sledeciRodj;
+ int tekGod;
+ printf("\n Unesite ime i prezime osobe: ");
+ gets(osoba.ime);
+ printf(" Unesite dan, mesec i godinu rodjenja: ");
+ scanf("%d %d %d", &osoba.datRodj.dan,
+ &osoba.datRodj.mesec, &osoba.datRodj.godina);
+ printf(" Unesite tekucu godinu: ");
+ scanf("%u",&tekGod);
+ sledeciRodj=osoba.datRodj;
+ sledeciRodj.godina=tekGod+1;
+ printf(" Sledeci rodjendan je: " );
+ printf("%d.%d.%d.",
+ sledeciRodj.dan, sledeciRodj.mesec, sledeciRodj.godina);
+ getche();
+ return 0;
+}
+#include <stdio.h>
+#define MAX 50
+#define MAXR 100
+typedef struct zaposleni
+{
+ char ime[MAX];
+ char prezime[MAX];
+ char radnomesto[MAX];
+ int plata; 
+ } ZAPOSLENI;
+main()
+{
+ int i, n;
+ ZAPOSLENI zp[MAXR];
+ printf("\n Broj radnika: ");
+ scanf("%d", &n);
+ for(i=0; i<n; i++)
+ {
+ printf("\n Unesite podatke o zaposlenom %d\n",i+1);
+ printf(" Unesite ime: ");
+ scanf("%s",&zp[i].ime);
+ printf(" Unesite prezime: ");
+ scanf("%s",&zp[i].prezime);
+ printf(" Unesite radno mesto: ");
+ scanf("%s",&zp[i].radnomesto);
+ printf(" Unesite platu: ");
+ scanf("%d",&zp[i].plata);
+ }
+ printf("\n\n");
+ for(i=0; i<n; i++)
+ {
+ printf(" Podaci o zaposlenom: %d\n", i+1);
+ printf(" Ime i prezime:\t%s %s\n", zp[i].ime, zp[i].prezime);
+ printf(" Radno mesto: \t%s\n", zp[i].radnomesto);
+ printf(" Plata: \t%d\n\n", zp[i].plata);
+ }
+ getche();
+ return 0;
+} 
+#include <stdio.h>
+struct licnost
+{
+ char ime[30];
+ char adresa[50];
+ unsigned starost;
+};
+void citaj(struct licnost *o)
+{
+ printf("\n Unesite ime: ");
+ gets(o->ime);
+ printf(" Unesite adresu: ");
+ gets(o->adresa);
+ printf(" Unesite starost: ");
+ scanf("%u",&o->starost);
+ while(getchar()!='\n');
+} 
+main()
+{
+ struct licnost osobal, osoba2, *s;
+ printf("\n -OSOBA 1-");
+ citaj(&osobal);
+ printf("\n - OSOBA 2-");
+ citaj(&osoba2);
+ if(osobal.starost > osoba2.starost)
+ s=&osobal;
+ else s=&osoba2;
+ printf("\n Starija osoba:");
+ printf("\n %s, %s, star: %u godina.\n",
+ s->ime, s->adresa, s->starost );
+ getche();
+ return 0;
+} 
+#include <stdio.h>
+#include <math.h>
+struct Vektor3D
+{
+ float x;
+ float y;
+ float z;
+};
+float Intenzitet(struct Vektor3D vektor)
+{
+ return sqrt(vektor.x*vektor.x+vektor.y*vektor.y+vektor.z*vektor.z);
+}
+main()
+{ struct Vektor3D vektor;
+ printf("\n Unesite x koordiantu vektora: ");
+ scanf("%f",&(vektor.x));
+ printf(" Unesite y koordinatu vektora: ");
+ scanf("%f",&(vektor.y));
+ printf(" Unesite z koordinatu vektora: ");
+ scanf("%f",&(vektor.z));
+ printf("\n Inetnzitet vekitra je %f", Intenzitet(vektor));
+ return 0;
+} 
+#include <stdio.h>
+#include <math.h>
+struct Vektor3D
+{
+ float x;
+ float y;
+ float z;
+};
+main()
+{
+ struct Vektor3D vektor,*pv;
+ printf("\n Unesite x koordinatu vektora: ");
+ scanf("%f",&(vektor.x));
+ printf(" Unesite y koordinatu vektora: ");
+ scanf("%f",&(vektor.y));
+ printf(" Unesite z koordinatu vektora: ");
+ scanf("%f",&(vektor.z));
+ pv=&vektor;
+ printf("\n x koordinata vektora je %.2f",pv->x);
+ printf("\n y koordinata vektora je %.2f",pv->y);
+ printf("\n z koordinata vektora je %.2f",pv->z);
+ printf("\n Intenzitet vektora je %f",
+ sqrt(pv->x*pv->x + pv->y*pv->y + pv->z*pv->z));
+ getche();
+ return 0;
+}
+#include <stdio.h>
+#define MAX 100
+typedef struct studenti
+{
+ char ime[15];
+ char prezime[20];
+ char brojIndexa[10];
+ int brPrenetih;
+ float prosek;
+} STUDENTI;
+main()
+{
+ STUDENTI Student[MAX];
+ int i, n;
+ float prosek=0;
+ printf("\n Unesite broj studenata: ");
+ scanf("%d",&n);
+ for(i=0; i<n; i++)
+ {
+ printf("\n PODACI O STUDENTU %d:\n", i+1);
+ printf(" Unesite ime i prezime studenta: ");
+ scanf("%s %s",&Student[i].ime, &Student[i].prezime);
+ printf(" Unesite broj indeksa: ");
+ scanf("%s",&Student[i].brojIndexa);
+ printf(" Unesite broj prenetih ispita: ");
+ scanf("%d",&Student[i].brPrenetih);
+ printf(" Unesite prosek: ");
+ scanf("%f",&Student[i].prosek);
+ }
+ printf("\n IZABRANI STUDENTI:\n");
+ for(i=0; i<n; i++)
+ {
+ if(Student[i].prosek>prosek)
+ if(Student[i].brPrenetih<5)
+ printf(" %s %s %s\n", Student[i].ime,
+ Student[i].prezime, Student[i].brojIndexa);
+ }
+ getche();
+ return 0;
+} 
