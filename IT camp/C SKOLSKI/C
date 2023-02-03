@@ -3824,3 +3824,37 @@ if((izlaz=fopen(ime2, "w"))== NULL)
  getche();
  return 0;
 }
+#include <stdio.h>
+struct licnost
+{
+ char ime[30];
+ char adresa[50];
+ int starost;
+};
+main()
+{
+ struct licnost osobal, osoba2, s;
+ printf("\n -OSOSBA 1-");
+ printf("\n Ime i prezime: ");
+ gets(osobal.ime);
+ printf(" Adresa: ");
+ gets(osobal.adresa);
+ printf(" Starost: ");
+ scanf("%d",&osobal.starost);
+ while (getchar()!='\n'); /*ocistiti ulazni string iz scanf
+ jer je "nova linija" separator*/
+ printf("\n -OSOSBA 2-");
+ printf("\n Ime i prezime: ");
+ gets(osoba2.ime);
+ printf(" Adresa: ");
+ gets(osoba2.adresa);
+ printf(" Starost: ");
+ scanf("%d",&osoba2.starost);
+ if(osobal.starost > osoba2.starost)
+ s=osobal;
+ else s=osoba2;
+ printf ("\n Starija osoba:\n" );
+ printf(" %s, %s, star:%d.\n",s.ime,s.adresa,s.starost);
+ getche();
+ return 0;
+}
