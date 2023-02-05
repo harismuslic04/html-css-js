@@ -3858,3 +3858,64 @@ main()
  getche();
  return 0;
 }
+ printf("\n Unesite trenutnu godinu: ");
+ scanf("%d", &danas.godina);
+ if((danas.godina<=0))
+ printf(" Pogrešna godina\n");
+ else
+ ok = 1;
+ }
+ if((sutra.godina%4==0 && sutra.godina%100!=0 ||
+ sutra.godina%400==0)==1)
+ brDana[1]=29;
+ ok=0;
+ while(ok==0)
+ {
+ printf(" Unesite trenutni mesec (1-12): ");
+ scanf("%d", & danas.mesec);
+ if((danas.mesec<1) || (danas.mesec>12))
+ printf(" Pogrešan mesec\n");
+ else
+ ok=1;
+ }
+ ok=0;
+ while(ok==0)
+ {
+ printf(" Unesite današnji dan u mesecu (1-%d): ",
+ brDana[danas.mesec-1]);
+ scanf("%d", &danas.dan);
+ if((danas.dan<1) || (danas.dan>brDana[danas.mesec-1]))
+ printf(" Pogrešan dan\n");
+ else
+ ok = 1;
+ }
+ sutra=danas;
+ sutra.dan++;
+ if(sutra.dan > brDana[sutra.mesec-1])
+ {
+ sutra.dan=1;
+ sutra.mesec++;
+ if(sutra.mesec>12)
+ {
+ sutra.godina++;
+ sutra.mesec=1;
+ }
+ }
+ printf("\n Sutrašnji datum: %02d:%02d:%04d\n",
+ sutra.dan, sutra.mesec, sutra.godina );
+ getche();
+ return 0;
+}
+#include <stdio.h>
+struct datum
+{
+ int dan, mesec, godina;
+};
+main()
+{
+ int brDana[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+ struct datum danas, sutra;
+ int ok=0;
+ while(ok==0)
+ { 
+
