@@ -3919,3 +3919,91 @@ main()
  while(ok==0)
  { 
 
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+ int *a; /*pokazivac na niz celih brojeva*/
+ int max=5; /*pocetna maksimalna velicina niza*/
+ int br=0; /*pocetno je u nizu 0 elemenata*/
+ int i, podatak;
+ a=malloc(max*sizeof(int));
+ if(a==NULL)
+ {
+ printf("\n Nema slobodne memorije!");
+ return 1;
+ }
+ printf("\n Unesite brojeve, za kraj unosa unesite slovo:\n");
+ while(scanf("%d",&podatak)==1)
+ {
+ a[br++]=podatak;
+ if(br>=max)
+ {
+ max+=5;
+ a=realloc(a, max*sizeof(int));
+ if(a==NULL)
+ {
+ printf("\n Nema slobodne memorije!");
+ return 1;
+ }
+ }
+ }
+ printf("\n Uneti brojeva:\n");
+ for(i=0; i<br; i++)
+ printf(" %d\n", a[i]);
+ free(a) ;
+ getche();
+ return 0;
+}
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, m, n, mat[MAX][MAX],mat2[MAX][MAX];
+ printf(" Vrsta m= ");
+ scanf("%d", &m);
+ printf(" Kolona n= ");
+ scanf("%d", &n);
+ for(i=0; i<m; i++)
+ for(j=0; j<n; j++)
+ {
+ printf(" element[%d][%d] = ",i,j);
+ scanf("%d", &mat[i][j]);
+ }
+ for(i=0; i<m; i++)
+ for(j=0; j<n; j++)
+ {
+ printf(" element[%d][%d] = ",i,j);
+ scanf("%d", &mat2[i][j]);
+ }
+  for(i=0; i<m; i++){
+ for(j=0; j<n; j++)
+      printf(" %d",mat[i][j]+mat2[i][j]);
+      printf("\n");
+  }
+ return 0;
+}
+#include <stdio.h>
+#define MAX 100
+int main()
+{
+ int i, j, m, n, mat[MAX][MAX],mat2[MAX][MAX];
+ float suma=0;
+ printf(" Vrsta m= ");
+ scanf("%d", &m);
+ printf(" Kolona n= ");
+ scanf("%d", &n);
+ for(i=0; i<m; i++)
+ for(j=0; j<n; j++)
+ {
+ printf(" element[%d][%d] = ",i,j);
+ scanf("%d", &mat[i][j]);
+ }
+ for(i=0; i<m; i++){
+ for(j=0; j<n; j++)
+ suma+=mat[i][j];
+ printf("%f",suma);
+ }
+ 
+ return 0;
+}
