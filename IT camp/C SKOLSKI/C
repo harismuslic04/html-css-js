@@ -4007,3 +4007,33 @@ int main()
  
  return 0;
 }
+#include <stdio.h>
+// zeko jede kupus ispit
+int main()
+{
+    int i,j,mat[100][100],m,kupus=0,br=0;
+    char a;
+
+
+printf("unesi m");
+scanf("%d",&m);
+
+for(i=0;i<m;i++)
+for(j=0;j<m;j++){
+    scanf("%d",&mat[i][j]);
+}
+ 
+for(i=0;i<m;i++){
+        for(j=0;j<m;j++){
+            printf("%d ",mat[i][j]);
+        }
+        printf("\n");
+    }
+    
+i=0;
+j=0;
+while(a!='k'){
+    a=getchar();
+    
+    if(a=='l'){
+        if(j==0)continue;
