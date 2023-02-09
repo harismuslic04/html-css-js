@@ -4037,3 +4037,76 @@ while(a!='k'){
     
     if(a=='l'){
         if(j==0)continue;
+        else{
+            j++;
+            br++;
+        if(mat[i][j]==1){
+        kupus++;
+        }
+    }
+    }
+    if(a=='d'){
+        if(j==m-1)continue;
+        else{
+        j++;
+        br++;
+        if(mat[i][j]==1){
+        kupus++;
+        }
+    }
+    }
+    if(a=='g'){
+        if(i==0)continue;
+        else{
+        i--;
+        br++;
+        if(mat[i][j]==1){
+        kupus++;
+        }    
+    }
+    }
+    if(a=='n'){
+        if(i==m-1)continue;
+        else{
+        i++;
+        br++;
+        if(mat[i][j]==1){
+        kupus++;
+        }
+    }
+    }
+    
+
+}
+printf("\nbroj kupusa je %d i broj skokova je %d",kupus,br);
+return 0;
+}
+#include <stdio.h>
+#define MAX 100
+int main()
+{
+int i,n,j,niz1[MAX],niz2[MAX],zbir[MAX],l=0,f;
+printf("unesi duzinu nizova");
+scanf("%d",&n);
+printf("unesi niz A");
+for(i=0;i<n;i++){
+    scanf("%d",&niz1[i]);
+}
+printf("unesi niz B");
+for(j=0;j<n;j++){
+    scanf("%d",&niz2[j]);
+}
+for(i=0;i<n;i++)
+for(j=0;j<n;j++){
+    if(niz1[i]==niz2[j]){
+        l++;
+        zbir[l]=niz1[i];
+    }
+}
+printf("%d",l);
+printf("presek nizova je");
+for(f=1;f<=l;f++){
+    printf("%d",zbir[f]);
+}
+return 0;
+}
