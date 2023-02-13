@@ -4110,3 +4110,167 @@ for(f=1;f<=l;f++){
 }
 return 0;
 }
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, n, m, k1, k2, pom, a[MAX][MAX];
+ printf(" m= ");
+ scanf("%d", &m);
+ printf(" n= ");
+ scanf("%d", &n);
+ for(i=0; i<m; i++)
+ for(j=0; j<n; j++)
+ {
+ printf(" element[%d][%d] = ", i, j);
+ scanf("%d", &a[i][j]);
+ }
+ printf("\n Zadata matrica:\n");
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, n, x, a[MAX][MAX];
+ printf(" x= ");
+ scanf("%d",&x);
+ printf(" n= ");
+ scanf("%d", &n);
+ printf("\n Uneta matrica: \n");
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ scanf("%d",&a[i][j]);
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ {
+ if(i>j) a[i][j]+=x;
+ if(i<j) a[i][j]+=2*x;
+ }
+ printf("\n Nova matrica:\n");
+ for(i=0; i<n; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d",a[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+}
+Испис на екрану
+ Збирка решених задатака из Програмског језика С – I део
+168
+ for(i=0; i<m; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d", a[i][j]);
+ printf("\n");
+ }
+ do
+ {
+ printf("\n Redni broj kolona za zamenu: ");
+ scanf("%d%d", &k1, &k2);
+ }
+ while(k1<1 || k1>n || k2<1 || k2>n);
+ for(i=0; i<n; i++)
+ {
+ pom=a[i][k1-1];
+ a[i][k1-1]=a[i][k2-1];
+ a[i][k2-1]=pom;
+ }
+ printf("\n Nova matrica:\n");
+ for(i=0; i<m; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d", a[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+} 
+#include <stdio.h>
+#define MAX 100
+void Citaj(int mat[MAX][MAX], int n)
+{
+ int i, j;
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ {
+ printf(" element[%d][%d] = ", i, j);
+ scanf("%d", &mat[i][j]);
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, n, pom, mat[MAX][MAX];
+ printf(" n= ");
+ scanf("%d", &n);
+ printf("\n");
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ {
+ printf(" element[%d][%d] = ", i, j);
+ scanf("%d", &mat[i][j]);
+ }
+ printf("\n Zadata matrica: \n");
+ for(i=0; i<n; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d",mat[i][j]);
+ printf("\n");
+ }
+ for(i=0; i<n-1; i++)
+ for(j=i+1; j<n; j++)
+ {
+ pom=mat[i][j];
+ mat[i][j]=mat[j][i];
+ mat[j][i]=pom;
+ }
+ printf ("\n Transponovana matrica:\n");
+ for(i=0; i<n; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d",mat[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+}
+ Збирка решених задатака из Програмског језика С – I део
+170
+ }
+}
+void Pisi(int mat[MAX][MAX], int n)
+{
+ int i, j;
+ for (i=0; i<n; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d",mat[i][j]);
+ printf("\n");
+ }
+}
+void Transp(int mat[MAX][MAX], int n)
+{
+ int i, j, pom;
+ for(i=0; i<n-1; i++)
+ for(j=i+1; j<n; j++)
+ {
+ pom=mat[i][j];
+ mat[i][j]=mat[j][i];
+ mat[j][i]=pom;
+ }
+}
+main()
+{
+ int i, j, n, pom, mat[MAX][MAX];
+ printf(" n= ");
+ scanf("%d", &n);
+ printf("\n");
+ Citaj(mat,n);
+ printf("\n Zadata matrica: \n");
+ Pisi(mat,n);
+ Transp(mat,n);
+ printf ("\n Transponovana matrica:\n");
+ Pisi(mat,n);
+ getche();
+ return 0;
+} 
