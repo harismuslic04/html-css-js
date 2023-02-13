@@ -4274,3 +4274,163 @@ main()
  getche();
  return 0;
 } 
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, n, a[MAX][MAX];
+ int maxv[MAX], minv[MAX], maxk[MAX], mink[MAX];
+ printf(" n= ");
+ scanf("%d", &n);
+ printf("\n");
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+Испис на екрану
+ Збирка решених задатака из Програмског језика С – I део
+171
+ {
+ printf(" element[%d][%d] = ", i, j);
+ scanf("%d", &a[i][j]);
+ }
+ printf("\n Zadata matrica: \n");
+ for(i=0; i<n; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %d",a[i][j]);
+ printf("\n");
+ }
+ for(i=0; i<n; i++)
+ {
+ minv[i]=a[i][0];
+ maxv[i]=a[i][0];
+ mink[i]=a[0][i];
+ maxk[i]=a[0][i];
+ for(j=1; j<n; j++)
+ {
+ if(a[i][j]<minv[i]) minv[i]=a[i][j];
+ if(a[i][j]>maxv[i]) maxv[i]=a[i][j];
+ if(a[j][i]<mink[i]) mink[i]=a[j][i];
+ if(a[j][i]>maxk[i]) maxk[i]=a[j][i];
+ }
+ }
+ printf("\n Najveci u vrstama: ");
+ for(i=0; i<n; i++)
+ printf("%d ", maxv[i]);
+ printf("\n Najmanji u vrstama: ");
+ for(i=0; i<n; i++)
+ printf("%d ", minv[i]);
+ printf("\n Najveci u kolonama: ");
+ for(i=0; i<n; i++)
+ printf("%d ", maxk[i]);
+ printf("\n Najmanji u kolonama: ");
+ for(i=0; i<n; i++)
+ printf("%d ", mink[i]);
+ getche();
+ return 0;
+} 
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, n, k;
+ int a[40][40],b[40][40];
+ printf("\n n= ");
+ scanf("%d",&n);
+ printf("\n Matrice %dx%d\n", n,n);
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ scanf("%d",&a[i][j]);
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ {
+ b[i][j]=0;
+ for(k=0; k<n; k++)
+ b[i][j]+=a[i][k]*a[k][j];
+ }
+ printf("\n Matrica AxA:\n");
+ for(i=0; i<n; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %4d ", b[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+}
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, m, n, k, p;
+ int a[MAX][MAX], b[MAX][MAX], c[MAX][MAX];
+ printf("\n Stepen n= ");
+ scanf("%d",&n);
+ printf(" Dimanzija m= ");
+ scanf("%d",&m);
+ printf("\n Matrica %dx%d:\n", m,m);
+ for(i=0; i<m; i++)
+ for(j=0; j<m; j++)
+ {
+ scanf("%d",&a[i][j]);
+ b[i][j]=a[i][j];
+ }
+
+#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, n, k;
+ int a[40][40],b[40][40];
+ printf("\n n= ");
+ scanf("%d",&n);
+ printf("\n Matrice %dx%d\n", n,n);
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ scanf("%d",&a[i][j]);
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ {
+ b[i][j]=0;
+ for(k=0; k<n; k++)
+ b[i][j]+=a[i][k]*a[k][j];
+ }
+ printf("\n Matrica AxA:\n");
+ for(i=0; i<n; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %4d ", b[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+}
+Испис на екрану
+ Збирка решених задатака из Програмског језика С – I део
+174
+ /*Stepenovanje matrice mnozeci je sa samom sobom n-1 puta*/
+ for(p=1; p<n; p++)
+ {
+ for(i=0; i<m; i++)
+ for(j=0; j<m; j++)
+ {
+ c[i][j]=0;
+ for(k=0; k<m; k++)
+ c[i][j]+=a[i][k]*b[k][j];
+ }
+ /*Prenos matrice C u matricu B*/
+ for(i=0; i<m; i++)
+ for(j=0; j<m; j++)
+ b[i][j]=c[i][j];
+ }
+
+ /*Ispis matrice*/
+ printf("\n Rezultujuca matrica:\n");
+ for(i=0; i<m; i++)
+ {
+ for(j=0; j<m; j++)
+ printf("%6d ",c[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+}
