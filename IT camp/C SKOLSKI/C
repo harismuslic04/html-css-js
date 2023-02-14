@@ -4434,3 +4434,53 @@ main()
  getche();
  return 0;
 }
+
+#include <stdio.h>
+void unesi(int mat[100][100],int n){
+    int i,j;
+    for(i=0;i<n;i++)
+    for(j=0;j<n;j++)
+    scanf("%d",&mat[i][j]);
+}
+void premesti(int mat[100][100],int n){
+    int i,j,pom,max,imax=n-1,jmax=n-1,min,imin=n-1,jmin=n-1;
+    max=mat[n-1][n-1];
+    min=mat[n-1][n-1];
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if(i+j>n-1){
+                if(mat[i][j]>max){
+                    max=mat[i][j];
+                    imax=i;
+                    jmax=j;
+                }
+                if(mat[i][j]<min){
+                    min=mat[i][j];
+                    imin=i;
+                    jmin=j;
+                }
+            }
+        }
+    }
+    pom=mat[imax][jmax];
+    mat[imax][jmax]=mat[imin][jmin];
+    mat[imin][jmin]=pom;
+    
+
+    for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+    printf("%d ",mat[i][j]);
+    }
+    printf("\n");
+    }
+    
+}
+
+int main()
+{   int mat[100][100],n;
+    printf("unesi n");
+    scanf("%d",&n);
+    unesi(mat,n);
+    premesti(mat,n);
+    return 0;
+}
