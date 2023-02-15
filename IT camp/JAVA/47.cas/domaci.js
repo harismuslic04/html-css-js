@@ -1,55 +1,51 @@
+// Domaci:
+// 34. Write a JavaScript function to get nth largest element from an unsorted array. Go to the editor
+
+// Test Data :
+// console.log(nthlargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4));
+// 89
+
 const nthlargest = (arr, position) => {
   arr.sort((a, b) => b - a);
-  return arr;
+  return arr[position - 1];
 };
 
-console.log(nthlargest([45, 78, 21, 123, 345, 62, 123, 634, 123, 538]));
+console.log(nthlargest([43, 56, 23, 89, 88, 90, 99, 652], 4));
 
-const person = {
-  firstName: "Bakir",
-  lastName: "Ujkanovic",
-  age: 19,
-};
+// 39. Write a JavaScript function to filter false, null, 0 and blank values from an array. Go to the editor
+
+// Test Data :
+// console.log(filter_array_values([58, '', 'abcd', true, null, false, 0]));
+// [58, "abcd", true]
+
+// 16. Write a JavaScript function to get a copy of the object where the keys have become the values and the values the keys.
+
 const keysToValues = (obj) => {
   const keys = Object.keys(obj);
   const values = Object.values(obj);
   const newObj = {};
-  for (let i = 0; i < values.length - 1; i++) {
+  for (let i = 0; i <= values.length - 1; i++) {
     newObj[values[i]] = keys[i];
   }
   return newObj;
 };
-console.log(keysToValues(person));
+// const student = {
+//   name: "David Rayy",
+//   sclass: "VI",
+//   rollno: 12,
+// };
+// console.log(keysToValues(student));
+// 3. Write a JavaScript program to get the length of a JavaScript object. Go to the editor
+// Sample object :
 
-const lengthOfObjects = (obj) => {
+const student = {
+  name: "David Rayy",
+  sclass: "VI",
+  rollno: 12,
+};
+
+const lengthOfObject = (obj) => {
   const length = Object.keys(obj).length;
   return length;
 };
-console.log(lengthOfObjects(person));
-
-function brutalno(nizA, nizB) {
-  const nizD = [];
-  const nizC = [];
-  for (let i = 0; i < nizB.length; i++) {
-    if (nizB[i] <= nizA.length) {
-      nizD.push(nizB[i]);
-    }
-  }
-  for (j = 0; j < nizA.length; j++) {
-    nizC[j] = nizA[nizD[j]];
-  }
-  return nizC;
-}
-
-console.log(brutalno([23, 52, 38, 44], [3, 1, 1, 2, 5]));
-
-function izi(nizA) {
-  let brojac = 0;
-  for (i = 0; i < nizA.length; i++) {
-    if (nizA[i] === nizA[i - 1] * 2 && nizA[i] === nizA[i + 1] - 10) {
-      brojac++;
-    }
-  }
-  return brojac;
-}
-console.log(izi([10, 20, 30, 40, 50]));
+console.log(lengthOfObject(student));
