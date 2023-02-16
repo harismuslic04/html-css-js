@@ -1,37 +1,3 @@
-// 1.  Uneti string se šifruje tako što se zamenjuje redosled znacima u stringu. Prvi i drugi zamene mesta, zatim 3. i 4. zamene mesta itd. Npr. za string 'Pera ima devojku', treba dobiti 'ePari amd vejouk'. Ako string ima neparan broj znakova, poslednji znak se ne dira.
-
-// const rec = "abcd";
-// let novaRec = "";
-// for (let i = 0; i < rec.length; i++) {
-//   if (i === 0) {
-//     novaRec += rec[i + 1];
-//   } else if (i === 1) {
-//     novaRec += rec[i - 1];
-//   } else if (i === 2) {
-//     novaRec += rec[i + 1];
-//   } else if (i === 3) {
-//     novaRec += rec[i - 1];
-//   }
-// }
-// console.log(novaRec);
-
-function menjanje(recenica) {
-  let novaRecenica = "";
-  for (let i = 0; i < recenica.length; i++) {
-    if (recenica.length % 2 !== 0 && i === recenica.length - 1) {
-      novaRecenica += recenica[i];
-    } else if (i % 2 === 0) {
-      novaRecenica += recenica[i + 1];
-    } else if (i % 2 !== 0) {
-      novaRecenica += recenica[i - 1];
-    }
-  }
-  return novaRecenica;
-}
-
-console.log(menjanje("Pera ima devojku"));
-console.log(menjanje("Pera ima devojku."));
-
 // 2.  Unose se dva stringa A i B. Kreirati novi string kao kombinaciju stringova A i B, tako što se kombinuju prvi sa prvim, drugi sa drugim, treći sa trećim znakom itd. Ako je jedan string duži od drugog, na kraju samo dodati znakove viška. Npr. za stringove "PERA" i "sladoled" dobija se string "PsElRaAdoled".
 
 const drugi = (recenica1, recenica2) => {

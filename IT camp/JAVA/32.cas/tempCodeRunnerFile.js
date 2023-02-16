@@ -1,2 +1,2 @@
-niz2.sort();
-// console.log(niz2);
+niz.splice(2, 6);
+// console.log(niz);

@@ -5,7 +5,7 @@
 //  1.  Mozemo dodati (koliko hocemo) elemenata na nekom mestu;
 //  2. Mozemo izbrisati (koliko hocemo) elemenata na nekom mestu;
 
-const niz = [
+let niz = [
   "Dzenan",
   "Bakir",
   "Amer",
@@ -27,8 +27,8 @@ const niz = [
 
 // Treci argument predstavlja vrednost koja ce se dodati na mestu koje smo definisali prvim argumentom.
 // Svi ostali argumenti su takodje vrednosti koje se dodaju unutar niza.
-// niz.splice(2, 0, "Tarik");
-// console.log(niz);
+niz.splice(2, 0, "Tarik");
+console.log(niz);
 
 // Iz niza izbrisati sve devojke;
 // Iz niza izbrisati sve muskarce;

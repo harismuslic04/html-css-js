@@ -21,7 +21,8 @@ let a = 12.1234;
 let b = a.toExponential(3);
 console.log(b);
 console.log(typeof b);
-
+let c = 167.782;
+console.log(c.toExponential(4));
 // toFixed() - vraca string broja, koji ce biti zaokruzen na onoliko decimala koliki je zapravo argument.
 
 a = 12.1234;
