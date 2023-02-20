@@ -4483,4 +4483,112 @@ int main()
     unesi(mat,n);
     premesti(mat,n);
     return 0;
+}#include <stdio.h>
+#define MAX 100
+main()
+{
+ int i, j, n, k;
+ int a[40][40],b[40][40];
+ printf("\n n= ");
+ scanf("%d",&n);
+ printf("\n Matrice %dx%d\n", n,n);
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ scanf("%d",&a[i][j]);
+ for(i=0; i<n; i++)
+ for(j=0; j<n; j++)
+ {
+ b[i][j]=0;
+ for(k=0; k<n; k++)
+ b[i][j]+=a[i][k]*a[k][j];
+ }
+ printf("\n Matrica AxA:\n");
+ for(i=0; i<n; i++)
+ {
+ for(j=0; j<n; j++)
+ printf(" %4d ", b[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+}
+Испис на екрану
+ Збирка решених задатака из Програмског језика С – I део
+174
+ /*Stepenovanje matrice mnozeci je sa samom sobom n-1 puta*/
+ for(p=1; p<n; p++)
+ {
+ for(i=0; i<m; i++)
+ for(j=0; j<m; j++)
+ {
+ c[i][j]=0;
+ for(k=0; k<m; k++)
+ c[i][j]+=a[i][k]*b[k][j];
+ }
+ /*Prenos matrice C u matricu B*/
+ for(i=0; i<m; i++)
+ for(j=0; j<m; j++)
+ b[i][j]=c[i][j];
+ }
+
+ /*Ispis matrice*/
+ printf("\n Rezultujuca matrica:\n");
+ for(i=0; i<m; i++)
+ {
+ for(j=0; j<m; j++)
+ printf("%6d ",c[i][j]);
+ printf("\n");
+ }
+ getche();
+ return 0;
+}
+
+#include <stdio.h>
+void unesi(int mat[100][100],int n){
+    int i,j;
+    for(i=0;i<n;i++)
+    for(j=0;j<n;j++)
+    scanf("%d",&mat[i][j]);
+}
+void premesti(int mat[100][100],int n){
+    int i,j,pom,max,imax=n-1,jmax=n-1,min,imin=n-1,jmin=n-1;
+    max=mat[n-1][n-1];
+    min=mat[n-1][n-1];
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if(i+j>n-1){
+                if(mat[i][j]>max){
+                    max=mat[i][j];
+                    imax=i;
+                    jmax=j;
+                }
+                if(mat[i][j]<min){
+                    min=mat[i][j];
+                    imin=i;
+                    jmin=j;
+                }
+            }
+        }
+    }
+    pom=mat[imax][jmax];
+    mat[imax][jmax]=mat[imin][jmin];
+    mat[imin][jmin]=pom;
+    
+
+    for(i=0;i<n;i++){
+    for(j=0;j<n;j++){
+    printf("%d ",mat[i][j]);
+    }
+    printf("\n");
+    }
+    
+}
+
+int main()
+{   int mat[100][100],n;
+    printf("unesi n");
+    scanf("%d",&n);
+    unesi(mat,n);
+    premesti(mat,n);
+    return 0;
 }
