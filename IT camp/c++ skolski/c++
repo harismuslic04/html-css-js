@@ -1,0 +1,84 @@
+#include <math.h>
+#include <iostream>
+// za unete koefecijente kvadratne jednacine izracunati i ispisati resenja
+using namespace std;
+/*ax2+bx+c=0
+D,x1,x2 
+D=b*b-4ac
+Tri slucaja
+D manje od 0 -nema realnih resenja
+D jednako 0 - -x=-b/2*a 
+D vece od 0 - ima dava resenjea:
+x1=-b+koren(D)/2*a
+x2=-b+koren(D)/2*a */
+int main()
+{
+ float a,b,c,D,x1,x2;
+ cout<<"Unesite koefecijente \n";
+ cin>>a>>b>>c;
+ D=pow(b,2)-4*a*c;
+ if(D<0){
+     cout<<"Jednacina nema realnih resenja\n";
+ }
+ else if (D=0){
+     x1=-b/(2*a);
+     cout<<"Jednacina ima jedno resenje i to je "<<x1<<"\n";
+ }
+ else{
+     x1=(-b+sqrt(D))/(2*a);
+     x2=(-b-sqrt(D))/(2*a);
+     cout<<"Resenja jednacine su "<<x1<<" i "<<x2<<"" ;
+ }
+ return 0;
+}
+
+#include <math.h>
+#include <iostream>
+// Uneti redni broj meseca i godinu i ispisati koliko dana ima mesec u godini
+using namespace std;
+
+int main()
+{
+  int m,g;
+  cout<<"Unesite redni broj i godinu \n";
+  cin>>m>>g;
+  switch(m){
+      case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+      cout<<"31 dan";
+      break;
+      case 4: case 6: case 9: case 11:
+      cout<<"30 dana \n";
+      break;
+      case 2:
+      if((g%4==0 && g%100!=0)||(g%400==0))
+      cout <<"29 dana \n";
+      else 
+      cout<<"28 dana \n";
+      break;
+      default:
+      cout<<"Pogresan redni broj  meseca \n";
+      break;
+  }
+  return 0;
+}
+
+#include <math.h>
+#include <iostream>
+
+using namespace std;
+ 
+ // korisnik unosi oznaku polja na koje se nalazi crni top kao i oznaka polja na koje top zeli da napadne
+ //Ispisati poruku da li top moze da napadne uneto polje
+int main()
+{
+ int x,y,x1,y1,x2,y2;
+ cout<<"Unesite polje table,poziciju topa i polje gde top zeli da napadne";
+ cin>>x>>y>>x1>>x2>>x2>>y2;
+ if( x1==x2 || y1==y2){
+     cout<<"Top moze da napadne";
+ }
+ else 
+ cout<<"Top ne moze da napadne";
+ 
+ return 0;
+}
