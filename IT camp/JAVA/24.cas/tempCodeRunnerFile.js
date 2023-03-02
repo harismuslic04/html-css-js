@@ -1,0 +1,1 @@
+// valueOf() metoda vraca vrednost neke promenljive.

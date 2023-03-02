@@ -79,3 +79,36 @@
 // NaN je JavaScript rezervisana rec koja ukazuje da broj nije korektan.
 // NaN je tipa number!!!
 // Infinity (ili -Infinity) je vrednost koju cemo da dobijemo kada rezultat premasi najveci broj u JavaScriptu  (bude veoma mali broj).
+// toString() pretvara broj u string.
+// Ova metoda pretvara bilo koji tip podatka u string.
+// toExponential() - nam vraca string broja, zaokruzen na onoliko decimala, koliki je argument metode.
+// toFixed() - vraca string broja, koji ce biti zaokruzen na onoliko decimala koliki je zapravo argument.
+// toPrecision() metoda vraca string broja, sa onoliko cifara koliki je argument funkcije.
+// valueOf() metoda vraca vrednost neke promenljive.
+// Global JavaScript methods //
+
+// Globalne metode mogu biti primenjene na bilo koji tip podatka.
+
+// Predstavicemo 3 najcesce koriscene metode sa brojevima.
+
+// 1. Number() - vraca broj konvertovan iz argumenta.
+// 2. parseInt() - analizira argument i vraca nam ceo broj ako je moguce.
+// 3. parseFloat() - analizira argument i vraca realni broj sa decimalnim zapisom ili bez ako je moguce.
+
+// 3. Math.SQRT2 - vraca vrednost kvadratnog korena broja 2
+// 4. Math.SQRT1_2 - vraca vrednost kvadratnog korena broja 1/2
+// 5. Math.LN2 - Vraca vrednost logaritma osnove e broja 2
+// 6. Math.LN10 - Vraca vrednost logaritma osnove e broja 10
+// 7. Math.LOG2E - Vraca vrednost logaritma osnove 2 broja e
+// 8. Math.LOG10E - Vraca vrednost logaritma osnove 10 broja e
+
+// 1. Math.round() - vraca blizi ceo broj.
+// 2. Math.ceil() - vraca sledeci ceo broj.
+// 3. Math.floor() - vraca prethodni ceo broj.
+// 4. Math.trunc() - vraca ceo broj bez decimalnog zapisa.
+// Math.sign(number) - vraca -1, 0 ili 1 u zavisnosti od toga kog je znaka broj.
+// Math.pow(number, power) - vraca number stepenovan na power.
+// Math.sqrt(number) - vraca kvadratni koren broja number.
+// Math.abs(number) - Vraca apsolutnu vrednost nekog broja.
+// Math.sin(radians) - vraca vrednost sinusa (izmedju -1 i 1). Argument se posmatra kao vrednost u radijanima.
+// Math.cos(radians) - vraca vrednost kosinusa (izmedju -1 i 1). Argument se posmatra kao vrednost u radijanima.

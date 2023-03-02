@@ -51,6 +51,18 @@ console.log(arr);
 // 1,9 -> 1,2,3,4,6,7,8,9 -> Result 8
 // 4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> Result 12
 
+//1.
+function zadatak(a, b) {
+  suma = 0;
+  for (i = a; i <= b; i++) {
+    let c = i.toString();
+    if (c.includes("5")) continue;
+    else suma++;
+  }
+  return suma;
+}
+console.log(zadatak(2, 8));
+
 // 2.
 // Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
 

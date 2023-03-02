@@ -72,7 +72,7 @@ function izbrisiDruguCifru(broj) {
     return `Argument mora imati 3 cifre.`;
   } else {
     const noviBroj = stringBroja.replace(stringBroja[1], "");
-    return +noviBroj;
+    return +noviBroj; //da bi bio number
   }
 }
 
