@@ -1,0 +1,1 @@
+// match() metoda nam vraca niz.
