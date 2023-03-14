@@ -1,0 +1,14 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+.header {
+  background-color: green;
+  display: flex;
+  top: 0;
+  height: 30vh;
+}
+.header h1 {
+  margin-left: 10vh;
+  margin-top: 10vh;
+}
