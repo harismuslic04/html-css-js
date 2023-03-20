@@ -60,5 +60,21 @@ console.log(niz4);
 // 3. Napraviti novi niz koji sadrzi kvadratne korene elemenata postojeceg niza.
 
 // 4.
-// const brojevi = [-5, 4, 3, 10, 14, -5];
+const brojevi = [-5, 4, 3, 10, 14, -5];
 // Napraviti novi niz koji ce sve negativne brojeve pomnoziti sa (-1), a pozitivne kvadrirati.
+
+const niz5 = niz.map((student) => student.toUpperCase());
+console.log(niz5);
+
+const niz6 = [1, 3, 5, 4, 8, 12];
+const niz7 = niz6.map((broj) => Math.pow(broj, 2));
+console.log(niz7);
+
+const niz8 = brojevi.map((brojevii) => {
+  if (brojevii < 0) {
+    return Math.abs(brojevii);
+  } else {
+    return brojevii * brojevii;
+  }
+});
+console.log(niz8);
