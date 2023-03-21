@@ -133,3 +133,58 @@ newDiv.append(textForNewDiv);
 container.appendChild(newDiv);
 
 input2.setAttribute("placeholder", "Unesite vasu email adresu");
+
+console.log(input2.getAttribute("placeholder"));
+
+// NASTAVAK
+
+// EVENTS
+
+let button = document.querySelector("button");
+console.log(button);
+button.addEventListener("click", buttonClicked);
+
+function buttonClicked(event) {
+  // console.log(event);
+  console.log(event.target.className);
+  console.log(event.target.classList);
+  console.log(event.target.clientX);
+  console.log(event.target.clientY);
+  console.log(event.altKey);
+  button.style.backgroundColor = "blue";
+  button.style.color = "red";
+  const podnaslov = getElementById("subtitle");
+  podnaslov.style.backgroundColor = "purple";
+}
+
+newDiv.addEventListener("dblclick", runEvent);
+newDiv.addEventListener("mousedown", runEvent);
+newDiv.addEventListener("mouseup", runEvent);
+newDiv.addEventListener("mouseleave", runEvent);
+newDiv.addEventListener("mouseenter", runEvent);
+function runEvent(event) {
+  console.log("Type of event" + event.type);
+}
+
+let inputs = document.querySelectorAll("input");
+let input = inputs[1];
+// console.log(input);
+
+// input.addEventListener("keypress", getValue);
+
+// function getValue(e) {
+//   let itemValue = e.target.value;
+//   console.log(itemValue);
+// }
+
+let form = document.querySelector("form");
+form.addEventListener("sumbit", getValues);
+
+function getValues(e) {
+  e.preventDefault();
+  let inputs = document.querySelectorAll("input");
+  let itemName = inputs[1].value;
+  let email = inputs[2].value;
+  console.log(itemName);
+  console.log(email);
+}
