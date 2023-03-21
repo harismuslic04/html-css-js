@@ -1,0 +1,1 @@
+// 1.JSON.stringify()pretvara nas objekat  u JSON format pa JSON u string.

@@ -41,7 +41,7 @@ const person2 = {
 };
 console.log(person2.fullName());
 
-// u JavaScriptu this je keyword (rezervisana rec) koja ukazuje na neki objekat.
+//
 // this nije promenljiva i ne mozemo promeniti vrednost this.
 
 // this ukazuje na razlicit objekat u zavisnosti od toga gde se koristi.

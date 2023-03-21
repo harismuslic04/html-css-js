@@ -1,0 +1,1 @@
+Rekurzivna funkcija poziva izvrsenje same sebe unutar funkcije.

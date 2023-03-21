@@ -1,0 +1,1 @@
+ call() metoda za prvi argument ima objekat na koji se primenjuje, ostali argumenti su argumenti metode koja se izvrsava.

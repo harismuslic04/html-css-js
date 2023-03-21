@@ -19,7 +19,7 @@ function foo(x, y) {
   console.log(x + y);
 }
 
-foo(0, 42);
+console.log(foo(0, 42));
 
 // Funkcija "foo" ima dva parametra, "x" i "y". U tijelu funkcije, "x" i "y" se postavljaju na vrijednost koja se predaje kao argument,
 // ako je vrijednost istinita (truthy), a inače se postavljaju na 11 i 31.
@@ -28,20 +28,21 @@ foo(0, 42);
 // Zatim se ispisuje zbir brojeva "x" i "y", što iznosi 53.
 
 // 4. sta ce ispisati:
-for (let i = 0; i < 5; i++) {}
-console.log(i)(
-  // Ovo će izazvati grešku "ReferenceError: i is not defined".
+// for (let i = 0; i < 5; i++) {
+//   console.log(i)(
+//     // Ovo će izazvati grešku "ReferenceError: i is not defined".
 
-  // Varijabla "i" je definirana samo unutar petlje "for", koristeći "let" ključnu riječ. To znači da je opseg (scope) varijable "i" ograničen na blok petlje "for". Kada se petlja završi, varijabla "i" se briše i više se ne može koristiti. Stoga, poziv "console.log(i)"
-  // izvan petlje izazvat će grešku "ReferenceError" jer varijabla "i" nije definirana u tom opsegu.
+//     // Varijabla "i" je definirana samo unutar petlje "for", koristeći "let" ključnu riječ. To znači da je opseg (scope) varijable "i" ograničen na blok petlje "for". Kada se petlja završi, varijabla "i" se briše i više se ne može koristiti. Stoga, poziv "console.log(i)"
+//     // izvan petlje izazvat će grešku "ReferenceError" jer varijabla "i" nije definirana u tom opsegu.
 
-  // 5. sta ce ispisati sledeca funkcija:
-  function () {
-    const a = (b = 3);
-  }
-)();
-console.log(typeof a !== "undefined");
-console.log(typeof b !== "undefined");
+//     // 5. sta ce ispisati sledeca funkcija:
+//     function () {
+//       const a = (b = 3);
+//     }
+//   )();
+// }
+// console.log(typeof a !== "undefined");
+// console.log(typeof b !== "undefined");
 
 // JavaScript Immediately Invoked Function Expressions (IIFEs)
 
@@ -68,7 +69,7 @@ console.log(typeof b !== "undefined");
 // Ako se varijabla kasnije koristi prije nego joj se dodijeli vrijednost, dobit će se "undefined".
 
 // 7. Sta ce ispisati:
-for (var i = 1; i <= 5; i++) {}
+// for (var i = 1; i <= 5; i++) {}
 
 // Ovaj kod neće ispisati ništa u konzolu, jer ne sadrži nikakvu naredbu za ispis.
 
@@ -97,13 +98,13 @@ console.log(i);
 // 10. Koji od sledecih linija pravi objekat unutar promenljive mojObj nepormenljivim
 // (nije mu moguce promeniti vrednost svojstava, brisati postojeca svojstva, kao ni dodavati nova)?
 
-Object.freezeKeys(mojObj);
+// Object.freezeKeys(mojObj);
 
-Object.freeze(mojObj);
+// Object.freeze(mojObj);
 
-Object.seal(mojObj);
+// Object.seal(mojObj);
 
-Object.preventExtensions(mojOBj);
+// Object.preventExtensions(mojOBj);
 
 // Funkcija Object.freeze(mojObj) pravi objekat unutar promenljive mojObj nepromenljivim,
 // tj. neće biti moguće promeniti postojeća svojstva, brisati postojeća svojstva, kao ni dodavati nova svojstva.
