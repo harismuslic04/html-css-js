@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Number guessing game</h1>
+
+      <p>
+        Izabrali smo broj izmedju 1 do 100.Imas 10 pokusaja da ga pogodis,uz
+        hintove da li je broj veci ili manji od unetog
+      </p>
+
+      <div class="form">
+        <label for="guessField">Unesi broj: </label>
+        <input
+          type="number"
+          min="1"
+          max="100"
+          required
+          id="guessField"
+          class="guessField"
+        />
+        <input type="submit" value="Potvrdi" class="guessSubmit" />
+      </div>
+
+      <div class="resultParas">
+        <p class="pokusaji"></p>
+        <p class="poslednjipokusaj"></p>
+        <p class="lowOrHi"></p>
+      </div>
+    </div>
+  </body>
+</html>

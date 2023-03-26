@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="nav">
+      <button type="button" class="button" id="restart">Again!</button>
+      <div class="background">
+        <button type="button" class="background-btn"></button>
+      </div>
+    </div>
+    <div class="title">
+      <h1 id="guess">Guess My Number!</h1>
+      <br />
+
+      <p id="guessp">(Between 1 and 20)</p>
+    </div>
+    <hr />
+    <div class="block"><h1>?</h1></div>
+    <div class="down">
+      <div class="left">
+        <form action="">
+          <input type="number" />
+          <button type="submit" class="button" id="game">Check!</button>
+        </form>
+      </div>
+      <div class="right">
+        <div id="first" class="div">
+          <h2 id="first-txt">Start guessing...</h2>
+        </div>
+        <div id="second" class="div">
+          <i id="icon" class="fa fa-gamepad"></i>
+
+          <h3 id="second-txt">Score: 20</h3>
+        </div>
+        <div id="third" class="div">
+          <i id="icon" class="fa fa-trophy"></i>
+
+          <h3 id="third-txt">Highscore: 0</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
