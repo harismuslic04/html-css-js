@@ -1,0 +1,25 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+.header {
+  display: flex;
+  width: 100%;
+  height: 7rem;
+  background-color: yellow;
+  position: relative;
+}
+.header h1 {
+  font-size: 3rem;
+  margin-left: 2rem;
+  color: purple;
+  margin-top: auto;
+}
+
+.header i {
+  color: red;
+  top: 27%;
+  left: 13%;
+  position: absolute;
+  font-size: 3rem;
+}

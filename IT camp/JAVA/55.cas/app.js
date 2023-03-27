@@ -57,5 +57,5 @@ const getMapUsers = async () => {
 };
 
 getMapUsers()
-  .then((data) => console.log(data))
+  .then((dataa) => console.log(dataa))
   .catch((error) => console.log(error));
