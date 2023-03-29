@@ -1,24 +1,34 @@
-const cizburger = new Promise((resolve, reject) => {
-//   const response = 400;
-//   //   const response = 404;
-//   if (response >= 200 && response < 300) {
-//     resolve();
-//   } else {
-//     reject();
-//   }
-// });
+function proveraString(text) {
+//   const promis = new Promise((resolve, reject) => {
+//     const stringg = text.toLowerCase();
+//     let brojac = 0;
+//     for (let i = 0; i < stringg.length; i++) {
+//       if (
+//         stringg[i] === "a" ||
+//         stringg[i] === "e" ||
+//         stringg[i] === "i" ||
+//         stringg[i] === "o" ||
+//         stringg[i] === "u"
+//       ) {
+//         brojac++;
+//       }
+//     }
+//     if (brojac > 10) {
+//       resolve("String zadovoljava uslov!");
+//     } else {
+//       reject("String ne zadovoljava uslov!");
+//     }
+//   });
 
-// cizburger
-//   .then(() => console.log("Dobio sam cizburger."))
-//   .catch(() => console.log("Nisam dobio obrok."))
-//   .finally(() => console.log("Obecanje je zavrseno."));
+//   promis
+//     .then((poruka) => {
+//       console.log(poruka);
+//     })
+//     .catch((poruka) => {
+//       console.log(poruka);
+//     });
+//   return "Proverili smo string!";
+// }
 
-// const niz = new Promise((resolve, reject) => {
-//   const response = 200;
-//   //   const response = 404;
-//   if (response >= 200 && response < 300) {
-//     resolve([1, 2, 3, 4, 5]);
-//   } else {
-//     reject("Nismo dobili trazeni niz.");
-//   }
-// });
+// console.log(proveraString("oooaoaoaoaoaoaoaoaooaoaoa"));
+// console.log(proveraString("neki str"));

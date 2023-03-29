@@ -30,8 +30,8 @@ body {
   height: 3rem;
   display: flex;
   align-items: center;
-  animation: background;
-  animation-duration: 2s;
+  /* animation: background; */
+  /* animation-duration: 2s; */
   cursor: pointer;
 }
 .nav .background .background-btn {

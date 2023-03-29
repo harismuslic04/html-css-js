@@ -128,7 +128,7 @@ newDiv.className = "newDiv";
 
 newDiv.id = "newId";
 
-const textForNewDiv = (document.createTextNode = "Hello World");
+const textForNewDiv = (document.createTextNode = "Hello ");
 
 newDiv.append(textForNewDiv);
 

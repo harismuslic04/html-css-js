@@ -11,27 +11,27 @@
 // Funkcija za prikupljanje podataka sa servera
 // const getUsers = () => {
 //   return fetch("https://jsonplaceholder.typicode.com/users")
-// .then((response) => response.json())
-// .then((data) => console.log(data))
-// .catch((error) => console.log(error.message))
-// .finally(() => setTimeout(getUsers, 1000 * 60 * 5)); // 5 minutes
+//     .then((response) => response.json())
+//     .then((data) => console.log(data))
+//     .catch((error) => console.log(error.message));
+//   // .finally(() => setTimeout(getUsers, 1000 * 60 * 5)); // 5 minutes
 // };
 
 // getUsers();
 
 // Asinhrona funkcija za prikupljanje podataka sa servera
 // User sa datim id-om
-const getUsers = async (id) => {
-  const data = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
-  const users = await data.json();
-  console.log(users);
-};
+// const getUsers = async (id) => {
+//   const data = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+//   const users = await data.json();
+//   console.log(users);
+// };
 
-getUsers(5);
+// getUsers(5);
 
 // async function getUsers() {
-//     const data = await fetch("https://jsonplaceholder.typicode.com/users");
-//     const users = await data.json();
+//   const data = await fetch("https://jsonplaceholder.typicode.com/users");
+//   const users = await data.json();
 // }
 
 // Prikupiti sve usere, a nakon toga vratiti json sa svim userima koji su prikazani sa odredjenim svojstvima:
@@ -57,5 +57,5 @@ const getMapUsers = async () => {
 };
 
 getMapUsers()
-  .then((dataa) => console.log(dataa))
+  .then((d) => console.log(d))
   .catch((error) => console.log(error));

@@ -16,7 +16,7 @@
 //   .finally(() => console.log("Obecanje je zavrseno."));
 
 // const niz = new Promise((resolve, reject) => {
-//   const response = 200;
+//   const response = 220;
 //   //   const response = 404;
 //   if (response >= 200 && response < 300) {
 //     resolve([1, 2, 3, 4, 5]);
@@ -27,13 +27,13 @@
 
 // chain efekat se postize tako sto vrednost koja treba biti koriscena u narednoj callback funkciji then metode se mora naci u return prethodne callback funkcije, prethodne then metode.
 // niz
-// .then((niz) => {
-//   console.log(`Dobili smo ${niz}.`);
-//   const parni = niz.filter((br) => br % 2 === 0);
-//   return parni;
-// })
-// .then((noviNiz) => console.log(`Filtriran niz je ${noviNiz}`))
-// .catch((message) => console.log(message));
+//   .then((niz) => {
+//     console.log(`Dobili smo ${niz}.`);
+//     const parni = niz.filter((br) => br % 2 === 0);
+//     return parni;
+//   })
+//   .then((noviNiz) => console.log(`Filtriran niz je ${noviNiz}`))
+//   .catch((message) => console.log(message));
 
 // Domaci:
 // Napraviti promise koji proverava da li je neki objekat ispunio uslova da je njegov property godine veci od 17 ili nije.
@@ -78,4 +78,4 @@ function proveraString(text) {
 }
 
 console.log(proveraString("oooaoaoaoaoaoaoaoaooaoaoa"));
-console.log(proveraString("neki str"));
+// console.log(proveraString("neki str"));
