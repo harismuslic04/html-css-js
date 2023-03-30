@@ -43,6 +43,11 @@ async function getData() {
     links[index].addEventListener("click", function (e) {
       let broj = 0;
       // e.preventDefault();
+      if (Array.from(cardContainer.children).length > 25) {
+        const videoPusteni = cardContainer.lastChild;
+        // console.log(videoPusteni);
+        cardContainer.removeChild(videoPusteni);
+      }
       let naslov = document.createElement("h2");
       naslov.textContent = svaki.name;
       naslov.style.gridRowStart = "1";
