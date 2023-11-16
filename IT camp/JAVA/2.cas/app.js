@@ -1,13 +1,13 @@
 // JavaScript moze prikazati podatke na nekoliko nacina:
 
 // 1. innerHTML
-document.getElementById("p").innerHTML = "Paragraf";
+// document.getElementById("p").innerHTML = "Paragraf";
 
 // 2. write()
-document.write(); // najcesci nacin za testiranje nekog koda
+// document.write(); // najcesci nacin za testiranje nekog koda
 
 // 3. alert() - upozorenje
-alert("Zdravo");
+// alert("Zdravo");
 
 // 4. console.log() - ispisivanje u konzoli
 console.log("Poruka za ispis u konzoli.");
@@ -34,8 +34,8 @@ ProsekOcena = 4.14; // korektno
 // Postoje 4 nacina za deklarisanje neke promenljive:
 
 // 1. Dodeljivanje vrednosti bez da smo prethodno izvrsili deklaraciju:
-//  prom = 12
-
+prom = 12;
+console.log(prom);
 // 2. Koriscenjem var keyword (rezervisane reci) -
 // var je koriscena na starijim browserima (sve se manje koristi)
 // var a = 5

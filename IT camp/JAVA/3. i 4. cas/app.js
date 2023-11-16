@@ -10,7 +10,7 @@ var x;
 // Reinicijalizacija promenljive x definisane putem var keyword je dozvoljeno,
 // bilo gde u prostoru.
 x = 22;
-
+console.log(x);
 // 2. let - Definisanje promenljive za koju postoji mogucnost promene vrednosti.
 let y; // deklarisanje promenljive y (obezbedjivanje lokacijske memorije za promenljivu y)
 y = 14; // inicijalizacija promenljive y (dodela vrednosti vec deklarisanoj promenljivoj y)

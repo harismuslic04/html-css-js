@@ -114,7 +114,7 @@
 
 // // 3. Setovi (Sets) - slicni nizovima sa razlikom da set ne moze da sadrzi duplikate.
 
-// set1 = new Set(["Alen", "Hasan", "Miona", "Amir", "Alen"]); // nisu dozvoljeni duplikati
+// set1 = new Set(["Alen", "Alen", "Hasan", "Miona", "Amir", "Alen"]); // nisu dozvoljeni duplikati
 // console.log(set1);
 
 // 4. Mape (Maps) - su slicni objektima, sa nesto drugacijim nacinom definisanja.
@@ -125,21 +125,22 @@
 //   ["jagode", 80],
 // ]);
 // console.log(map1);
-// let i = 0;
-// let broj1 = +prompt("unesite broj");
-// if (isNaN(broj1)) {
-//   console.log("Unesite realan broj");
-// } else {
-//   broj1 = broj1 ** 2;
-//   console.log(broj1);
-// }
-// let broj1 = Number(prompt("Unesite neki broj:"));
-// if (isNaN(broj1) || broj1 < 1) {
-//   console.log("Niste uneli konkretnu vrednost za broj");
-// }
-// for (let i = 1; i <= broj1; i++) {
-//   console.log(broj1 * broj1);
-// }
+const prompt = require("prompt-sync")();
+let i = 0;
+let broj1 = +prompt("unesite broj");
+if (isNaN(broj1)) {
+  console.log("Unesite realan broj");
+} else {
+  broj1 = broj1 ** 2;
+  console.log(broj1);
+}
+let broj2 = Number(prompt("Unesite neki broj:"));
+if (isNaN(broj2) || broj2 < 1) {
+  console.log("Niste uneli konkretnu vrednost za broj");
+}
+for (let i = 1; i <= broj1; i++) {
+  console.log(broj1 * broj1);
+}
 
 // for (i = 1; i < 101; i++) {
 //   if (i % 3 === 0 && i % 5 === 0) {

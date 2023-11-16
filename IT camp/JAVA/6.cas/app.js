@@ -61,7 +61,7 @@ for (let broj = 1; broj < 11; broj++) {
 
 // Ispisati parne brojeve od 1 do 20 na dva nacina.
 // I nacin
-for (let broj = 1; broj <= 20; broj++) {
+for (let broj = 0; broj <= 20; broj++) {
   if (broj % 2 === 0) {
     console.log(broj);
   }

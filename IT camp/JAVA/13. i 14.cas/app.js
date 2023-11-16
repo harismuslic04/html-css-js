@@ -134,7 +134,7 @@ const kvadratBroja = (broj) => broj ** 2;
 // Ako nije unet broj, ispisuje poruku "UNETA VREDNOST NIJE BROJ"
 
 const unos = () => {
-  const broj = Number(prompt("Unesite neki broj: "));
+  let broj = +prompt("Unesite neki broj: ");
   if (isNaN(broj)) {
     return "UNETA VREDNOST NIJE BROJ";
   } else if (broj === 0) {
