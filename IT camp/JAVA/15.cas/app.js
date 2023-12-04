@@ -18,7 +18,7 @@ if (isSunny) {
 // 8.  NaN
 
 // Napraviti funkciju gde se trazi unos od strane korisnika i vraca poruka da li je uneta vrednost TRUTHY ili FALSY vrednost.
-
+// const prompt = require("prompt-sync")();
 function isTruthy() {
   const vrednost = +prompt("Unesite nesto: ");
   if (vrednost) {

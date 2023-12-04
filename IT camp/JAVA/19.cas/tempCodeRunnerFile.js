@@ -1,1 +1,1 @@
-// startsWith() i endsWith() metode nam vracaju boolean u zavisnosti od toga da li dati string pocinje (zavrsava) argumentom metode.
+i++;

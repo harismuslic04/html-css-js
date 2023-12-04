@@ -11,7 +11,7 @@ console.log(y);
 console.log(typeof y);
 console.log(y + x);
 
-// toExponential() - nam vraca string broja, zaokruzen na onoliko decimala, koliki je argument metode.
+// sys - nam vraca string broja, zaokruzen na onoliko decimala, koliki je argument metode.
 
 let z = 55.4758;
 let w = z.toExponential(2);

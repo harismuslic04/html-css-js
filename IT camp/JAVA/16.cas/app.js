@@ -3,7 +3,7 @@
 
 const recenica = "DanaS smo podelili sertifikate za HTML, CSS i JavaScript.";
 
-let recenica2 = recenica.replace("Danas", "Juce");
+let recenica2 = recenica.replace("DanaS", "Juce");
 console.log(recenica2);
 recenica2 = recenica.replace("s", "t");
 console.log(recenica2);
@@ -62,7 +62,7 @@ const mojaFukncija = function (recenica) {
         : Math.ceil(recenica.length / 2);
     const isecak = recenica.slice(polaDuzine, recenica.length);
     const novaRecenica = isecak.replace(/a/g, "B");
-    const konacno = "Ovo je novodobijena recenica, ".concat(novaRecenica);
+    const konacno = "Ovo je novodobijena recenica, \n".concat(novaRecenica);
     return konacno;
   } else {
     const recenica2 = recenica.concat(

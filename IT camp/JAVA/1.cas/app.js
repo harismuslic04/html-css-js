@@ -114,9 +114,7 @@
 
 // // 3. Setovi (Sets) - slicni nizovima sa razlikom da set ne moze da sadrzi duplikate.
 
-// set1 = new Set(["Alen", "Alen", "Hasan", "Miona", "Amir", "Alen"]); // nisu dozvoljeni duplikati
-// console.log(set1);
-
+//
 // 4. Mape (Maps) - su slicni objektima, sa nesto drugacijim nacinom definisanja.
 
 // map1 = new Map([

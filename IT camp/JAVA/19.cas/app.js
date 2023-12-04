@@ -64,6 +64,7 @@ console.log(recenica5);
 // Ako je recenica parne duzine neka se vrati broj pojavljivanja reci "kuca".
 
 function task(recenica) {
+  console.log(recenica.length);
   if (recenica.includes("skola")) {
     return recenica.indexOf("skola");
   } else if (recenica.startsWith("Automobil")) {
@@ -79,7 +80,8 @@ function task(recenica) {
         i++;
       }
     }
+
     return `Broj pojavljivanja reci "kuca" unutar datog stringa je ${brojac}.`;
   }
 }
-console.log(task("kuca kucakuca kuca kuca kuca"));
+console.log(task("kuca kuca kuca kuca kuca kucaa"));
