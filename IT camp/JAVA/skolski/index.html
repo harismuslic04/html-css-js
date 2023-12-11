@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Ime prvog igraca" id="igrac1" />
+    <input type="text" placeholder="ime drugog igraca" id="igrac2" />
+    <br />
+    <button onclick="zapocniIgru()">Igraj</button>
+    <table id="tabela" border="1px solid black"></table>
+    <script>
+      class Igrac {
+        constructor(ime) {
+          this.ime = ime;
+          this.brojevi = [];
+          this.brojPobedaRundi = 0;
+        }
+
+        izracunajZbirRundi = function (runda) {
+          return this.brojevi[runda].kocka1 + this.brojevi[runda].kocka2;
+        };
+
+        odigrajRundu = function () {
+          const prvaKocka = baciKocku();
+          const drugaKocka = baciKocku();
+          this.brojevi.push({
+            kocka1: prvaKocka,
+            kocka2: drugaKocka,
+          });
+          return `${prvaKocka} + ${drugaKocka} = ${prvaKocka + drugaKocka}`; //treba manje da nadjem
+        };
+      }
+      function baciKocku() {
+        return Math.floor(Math.random() * 6) + 1;
+      }
+      function zapocniIgru() {
+        const ime1 = document.getElementById("igrac1").value;
+        const ime2 = document.getElementById("igrac2").value;
+        if (ime1 == "" || ime2 == "") {
+          alert("Morate uneti imena igraca");
+          return;
+        }
+        const igrac1 = new Igrac(ime1);
+        const igrac2 = new Igrac(ime2);
+        const tbl = document.getElementById("tabela");
+        kreirajZaglavlje(tbl, ime1, ime2);
+        for (let i = 0; i < 11; i++) {
+          const r1 = igrac1.odigrajRundu();
+          const r2 = igrac2.odigrajRundu();
+          kreirajRedPodataka(tbl, r1, r2);
+          const z1 = igrac1.izracunajZbirRundi(i);
+          const z2 = igrac2.izracunajZbirRundi(i);
+          if (z1 > z2) {
+            igrac2.brojPobedaRundi++;
+          } else if (z1 < z2) {
+            igrac2.brojPobedaRundi++;
+          }
+        }
+      }
+      let elementiZaglavlja = document.querySelectorAll("th");
+      if (igrac1.brojPobedaRundi > igrac2.brojPobedaRundi) {
+        //prvi je pobedio i treba da bude zelene boje, a drugi crvene
+        elementiZaglavlja[0].style.color = "green";
+        elementiZaglavlja[1].style.color = "red";
+      } else if (igrac1.brojPobedaRundi < igrac2.brojPobedaRundi) {
+        elementiZaglavlja[0].style.color = "red";
+        elemeniZaglavlja[1].style.color = "green";
+      }
+
+      function kreirajZaglavlje(tbl, ime1, ime2) {
+        const tr = document.createElement("tr");
+        const th1 = document.createElement("th");
+        const th2 = document.createElement("th");
+        const t1 = document.createTextNode(ime1);
+        const t2 = document.createTextNode(ime2);
+        th1.appendChild(t1);
+        th2.appendChild(t2);
+        tr.appendChild(th1, th2);
+        tbl.appendChild(tr);
+      }
+      function kreirajRedPodataka(tbl, i1, i2) {
+        const tr = document.createElement("tr");
+        const td1 = document.createElement("td");
+        const td2 = document.createElement("td");
+        const t1 = document.createTextNode(i1);
+        const t2 = document.createTextNode(i2);
+        td1.appendChild(t1);
+        td2.appendChild(t2);
+        tr.append(td1, td2);
+        tbl.appendChild(tr);
+      }
+    </script>
+  </body>
+</html>
