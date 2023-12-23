@@ -60,7 +60,7 @@ const myCar = {
   kontakt: [0622222, 02033322],
   servis: {
     datum: "04,maj",
-    km: 23000,
+    km: 23000,a
     serviser: "Pasovic",
   },
   udaran: true,
