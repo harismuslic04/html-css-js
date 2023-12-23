@@ -1,1 +1,5 @@
-Rekurzivna funkcija poziva izvrsenje same sebe unutar funkcije.
+hello("Mehmede");
+
+// const hello = (par) => {
+//   console.log(`Hello ${par}`);
+// };

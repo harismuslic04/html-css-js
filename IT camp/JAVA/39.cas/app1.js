@@ -13,10 +13,10 @@ console.log(prom4);
 console.log(prom5);
 console.log(prom6);
 
-// x = 15;
-// let y = 16;
+x = 15;
+let y = 16;
 
-// console.log(x + y);
+console.log(x + y);
 
 add(10, 15);
 
@@ -24,8 +24,8 @@ function add(a, b) {
   console.log(a + b);
 }
 
-hello("Mehmede");
+// hello("Mehmede");
 
-const hello = (par) => {
-  console.log(`Hello ${par}`);
-};
+// const hello = (par) => {
+//   console.log(`Hello ${par}`);
+// };

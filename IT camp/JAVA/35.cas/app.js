@@ -1,5 +1,5 @@
 // Kvadrirati one brojeve koje imaju index 0,3,5.
-brojevi = [2, 5, 8, -3, 5, 9];
+let brojevi = [2, 5, 8, -3, 5, 9];
 const brojevi1 = brojevi.map((element, index) => {
   if (index === 0 || index === 3 || index === 5) {
     return element ** 2;
