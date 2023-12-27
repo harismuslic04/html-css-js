@@ -9,8 +9,8 @@ const person = {
 // Object.freeze(obj) metoda cini objekat nepromenljivim.
 person.age = 17;
 console.log(person);
-// Object.freeze(person);
-// person.age = 22;
+Object.freeze(person);
+person.age = 22;
 // console.log(person);
 
 // Object.seal(obj) cini objekat promenljivim s tim sto nema mogucnost dodavanja (brisanja) novih svojstava i metoda.

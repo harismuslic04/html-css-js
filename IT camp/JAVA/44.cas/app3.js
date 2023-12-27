@@ -9,7 +9,7 @@ const movies = [
 
 const movies2 = movies.map((element) => {
   return {
-    title: element.title,
+    tittle: element.title,
     budget: element.budget,
   };
 });
