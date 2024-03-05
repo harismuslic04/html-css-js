@@ -73,6 +73,7 @@ const input2 = document.querySelector("input[type='email']");
 input2.value = "test@test.com";
 input2.placeholder = "Unesite vasu email adresu";
 
+// console.log(input2);
 // QUERY SELECTOR ALL
 
 const listItems2 = document.querySelectorAll("li");
@@ -90,22 +91,23 @@ const oddLi = document.querySelectorAll("li:nth-child(odd)");
 // parentNode
 
 // const title = document.getElementById("add");
+// console.log("haha");
 // console.log(title.parentNode);
 
 // parentElement
 
-// const title = document.getElementById("add");
-// console.log(title.parentElement);
+// const title1 = document.getElementById("add");
+// console.log(title1.parentElement);
 
 // childNodes   (vraca sve elemente i razmake)
 
-// const container = document.querySelector(".container");
-// console.log(container.childNodes);
+// const container1 = document.querySelector(".container");
+// console.log(container1.childNodes);
 
 // children (vraca samo elemente)
 
-// const container = document.querySelector(".container");
-// console.log(container.children);
+// const container1 = document.querySelector(".container");
+// console.log(container1.children);
 
 // firstElementChild
 
@@ -134,7 +136,8 @@ newDiv.append(textForNewDiv);
 
 container.appendChild(newDiv);
 
-input2.setAttribute("placeholder", "Unesite vasu email adresu");
+input2.setAttribute("placeholder", "Unesite vasu email adresuuu");
+console.log(input2);
 console.log(input2.getAttribute("placeholder"));
 
 // NASTAVAK
@@ -180,17 +183,17 @@ function runEvent(event) {
 }
 
 // let inputs = document.querySelectorAll("input");
-// let input = inputs[1];
-// console.log(input);
+// let input3 = inputs[1];
+// console.log(input3);
 
-// input.addEventListener("keypress", getValue);
-// input.addEventListener("input", getValue);
-// input.addEventListener("submit", getValue);
+// input3.addEventListener("keypress", getValue);
+// input3.addEventListener("input", getValue);
+// input3.addEventListener("submit", getValue);
 
-function getValue(e) {
-  let itemValue = e.target.value;
-  console.log(itemValue);
-}
+// function getValue(e) {
+//   let itemValue = e.target.value;
+//   console.log(itemValue);
+// }
 
 let form = document.querySelector("form");
 form.addEventListener("submit", getValues);
