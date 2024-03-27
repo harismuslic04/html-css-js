@@ -251,7 +251,6 @@ header button:hover {
   font-size: 40px;
 }
 .linije {
-  color: black;
   width: 140px;
   height: 2px;
   background-color: rgb(207, 207, 207);
@@ -679,8 +678,8 @@ header button:hover {
 }
 .sesti {
   background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)),
-    url(./CTA-bg-1.jpg) fixed center center;
-  background-size: cover;
+    url(./CTA-bg-1.jpg) fixed center;
+  /* background-size: cover; */
   width: 100%;
   height: 380px;
 }
@@ -766,9 +765,7 @@ header button:hover {
   font-size: 17px;
   border: 1px solid #47b2e4;
 }
-.sedmi ul li button {
-  gap: 20px;
-}
+
 #drugili button {
   width: 70px;
   border-radius: 10px;
@@ -832,7 +829,7 @@ header button:hover {
   background-color: white;
   margin: auto;
   display: flex;
-  position: relative;
+  /* position: relative; */
 }
 .osmi .boxslika1 {
   overflow: hidden;
@@ -841,7 +838,6 @@ header button:hover {
   position: relative;
 }
 .boxslika1 img {
-  position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -859,7 +855,6 @@ header button:hover {
   bottom: 375px;
 }
 .boxslika2 img {
-  position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -877,7 +872,6 @@ header button:hover {
   left: 34.6%;
 }
 .boxslika3 img {
-  position: absolute;
   width: 100%;
 
   height: 90%;
@@ -895,7 +889,6 @@ header button:hover {
   overflow: hidden;
 }
 .boxslika4 img {
-  position: absolute;
   width: 100%;
 
   height: 100%;
@@ -913,7 +906,6 @@ header button:hover {
   overflow: hidden;
 }
 .boxslika5 img {
-  position: absolute;
   width: 100%;
 
   height: 100%;
@@ -932,7 +924,6 @@ header button:hover {
   height: 200px;
 }
 .boxslika6 img {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -949,7 +940,6 @@ header button:hover {
   height: 235px;
 }
 .boxslika7 img {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -966,7 +956,6 @@ header button:hover {
   height: 235px;
 }
 .boxslika8 img {
-  position: absolute;
   width: 100%;
   height: 100%;
 }
@@ -983,7 +972,6 @@ header button:hover {
   overflow: hidden;
 }
 .boxslika9 img {
-  position: absolute;
   width: 100%;
   height: 100%;
 }

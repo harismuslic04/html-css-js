@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(60, 131, 119, 0.541),
+      rgba(44, 85, 56, 0.65)
+    ),
+    url(horse-riding-iceland-premium-tours-2-1-20200612170543_nykw5z.avif);
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo {
+  width: 5rem;
+  cursor: pointer;
+  padding-left: 1rem;
+}
+nav ul {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+  padding-right: 12rem;
+}
+nav ul li {
+  display: inline-block;
+  margin: 10px 20px;
+  font-size: 1.2rem;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.log {
+  padding: 10px 20px;
+  width: 10rem;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  background: rgb(123, 153, 75);
+  cursor: pointer;
+  margin-right: 15rem;
+}
+.content {
+  margin-top: 15%;
+  color: #fff;
+  margin-left: 10rem;
+  font-size: 2rem;
+}
+.england {
+  position: absolute;
+  right: 5rem;
+  width: 2rem;
+  cursor: pointer;
+}
+.serbia {
+  position: absolute;
+  right: 2rem;
+  width: 2rem;
+  cursor: pointer;
+}
